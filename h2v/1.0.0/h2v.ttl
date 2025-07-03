@@ -1,0 +1,495 @@
+@prefix : <https://w3id.org/h2v#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/h2v#> .
+
+<https://w3id.org/h2v> rdf:type owl:Ontology ;
+                        owl:versionIRI <https://w3id.org/h2v/1.0.0> ;
+                        <http://purl.org/dc/elements/1.1/contributor> "Claudio Sesto (RSE)" ,
+                                                                      "Francesca Soldan (RSE)" ,
+                                                                      "Ilaria Baroni (Cefriel)" ,
+                                                                      "Irene Celino (Cefriel)" ;
+                        <http://purl.org/dc/elements/1.1/creator> "Gloria Re Calegari (Cefriel)" ,
+                                                                  "Valentina Carriero (Cefriel)" ;
+                        <http://purl.org/dc/elements/1.1/title> "Hydrogen Valley Ontology (H2V)" ;
+                        <http://purl.org/dc/terms/description> "The Hydrogen Valley Ontology (H2V) models the Hydrogen Valley domain, with all its components and properties, and related activities." ;
+                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                        <http://purl.org/dc/terms/publisher> <https://ror.org/046bfkz44> ;
+                        <http://purl.org/ontology/bibo/status> "Published"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "h2v" ;
+                        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/h2v#" ;
+                        rdfs:label "Hydrogen Valley Ontology (H2V)" ;
+                        owl:versionInfo "1.0.0" ;
+                        <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/hasUnit
+<http://qudt.org/schema/qudt/hasUnit> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "has unit" .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "has geometry" .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "has feature of interest" .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "has result" .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty ;
+                                             rdfs:label "observed property" .
+
+
+###  http://www.w3.org/ns/ssn/hasProperty
+<http://www.w3.org/ns/ssn/hasProperty> rdf:type owl:ObjectProperty ;
+                                       rdfs:label "has property" .
+
+
+###  http://www.w3.org/ns/ssn/hasSubSystem
+<http://www.w3.org/ns/ssn/hasSubSystem> rdf:type owl:ObjectProperty ;
+                                        rdfs:label "has sub system" .
+
+
+###  https://w3id.org/h2v#allocatedBy
+:allocatedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :HydrogenAllocation ;
+             rdfs:range <http://www.w3.org/ns/ssn/System> ;
+             rdfs:comment "This property links an Hydrogen Allocation to the System that is allocating hydrogen to another system." ;
+             rdfs:label "allocated by" .
+
+
+###  https://w3id.org/h2v#allocatedTo
+:allocatedTo rdf:type owl:ObjectProperty ;
+             rdfs:domain :HydrogenAllocation ;
+             rdfs:range <http://www.w3.org/ns/ssn/System> ;
+             rdfs:comment "This property links an Hydrogen Allocation to the System that is receiving hydrogen from another system. " ;
+             rdfs:label "allocated to" .
+
+
+###  https://w3id.org/h2v#forecastsProperty
+:forecastsProperty rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Forecast ;
+                   rdfs:range :DynamicProperty ;
+                   rdfs:comment "This property links a Forecast to the Dynamic Property the forecast is about." ;
+                   rdfs:label "forecasts property" .
+
+
+###  https://w3id.org/h2v#hasAllocatedValue
+:hasAllocatedValue rdf:type owl:ObjectProperty ;
+                   rdfs:domain :HydrogenAllocation ;
+                   rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+                   rdfs:comment "nan" ;
+                   rdfs:label "has allocated value" .
+
+
+###  https://w3id.org/h2v#hasDynamicProperty
+:hasDynamicProperty rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://www.w3.org/ns/ssn/System> ;
+                    rdfs:range :DynamicProperty ;
+                    rdfs:comment "This property links a System to a Dynamic Property of the System." ;
+                    rdfs:label "has dynamic property" .
+
+
+###  https://w3id.org/h2v#hasExporter
+:hasExporter rdf:type owl:ObjectProperty ;
+             rdfs:domain :HydrogenImportExport ;
+             rdfs:range <http://www.w3.org/ns/ssn/System> ;
+             rdfs:comment "This property links an Hydrogen Import Export activity to the System that is exporting to another system." ;
+             rdfs:label "has exporter" .
+
+
+###  https://w3id.org/h2v#hasForecastedValue
+:hasForecastedValue rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Forecast ;
+                    rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+                    rdfs:comment "This property links a Forecast to the Quantity Value of the Dynamic Property that the forecast is about." ;
+                    rdfs:label "has forecasted value" .
+
+
+###  https://w3id.org/h2v#hasImportedExportedValue
+:hasImportedExportedValue rdf:type owl:ObjectProperty ;
+                          rdfs:domain :HydrogenImportExport ;
+                          rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+                          rdfs:comment "This property links an Hydrogen Import Export activity to the amount of hydrogen that is being imported/exported." ;
+                          rdfs:label "has imported exported value" .
+
+
+###  https://w3id.org/h2v#hasImporter
+:hasImporter rdf:type owl:ObjectProperty ;
+             rdfs:domain :HydrogenImportExport ;
+             rdfs:range <http://www.w3.org/ns/ssn/System> ;
+             rdfs:comment "This property links an Hydrogen Import Export activity to the System that is importing from another system." ;
+             rdfs:label "has importer" .
+
+
+###  https://w3id.org/h2v#hasStaticProperty
+:hasStaticProperty rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://www.w3.org/ns/ssn/System> ;
+                   rdfs:range :StaticProperty ;
+                   rdfs:comment "This property links a System to a Static Property of the System." ;
+                   rdfs:label "has static property" .
+
+
+###  https://w3id.org/h2v#hasStaticValue
+:hasStaticValue rdf:type owl:ObjectProperty ;
+                rdfs:domain :StaticProperty ;
+                rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+                rdfs:comment "This property links a Static Property to its static Quantity Value." ;
+                rdfs:label "has static value" .
+
+
+###  https://w3id.org/h2v#isDynamicPropertyOf
+:isDynamicPropertyOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain :DynamicProperty ;
+                     rdfs:range <http://www.w3.org/ns/ssn/System> ;
+                     rdfs:comment "This property links a Dynamic Property to the System it refers to." ;
+                     rdfs:label "is dynamic property of" .
+
+
+###  https://w3id.org/h2v#isStaticPropertyOf
+:isStaticPropertyOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain :StaticProperty ;
+                    rdfs:range <http://www.w3.org/ns/ssn/System> ;
+                    rdfs:comment "This property links a Static Property to the System it refers to." ;
+                    rdfs:label "is static property of" .
+
+
+###  https://w3id.org/h2v#isStaticValueOf
+:isStaticValueOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://qudt.org/schema/qudt/QuantityValue> ;
+                 rdfs:range :StaticProperty ;
+                 rdfs:comment "This property links a static Quantity Value to the Static Property it refers to." ;
+                 rdfs:label "is static value of" .
+
+
+###  https://w3id.org/h2v#refersToFeature
+:refersToFeature rdf:type owl:ObjectProperty ;
+                 rdfs:domain :WeatherForecast ;
+                 rdfs:range <http://www.opengis.net/ont/geosparql#Feature> ;
+                 rdfs:comment "This property links a Weather Forecast to the geographical Feature to which the forecast applies." ;
+                 rdfs:label "refers to feature" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:label "identifier" .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "title" .
+
+
+###  http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> rdf:type owl:DatatypeProperty ;
+                                           rdfs:label "numeric value" .
+
+
+###  http://schema.org/maxValue
+<http://schema.org/maxValue> rdf:type owl:DatatypeProperty ;
+                             rdfs:label "max value" .
+
+
+###  http://schema.org/minValue
+<http://schema.org/minValue> rdf:type owl:DatatypeProperty ;
+                             rdfs:label "min value" .
+
+
+###  http://www.w3.org/ns/prov#atTime
+<http://www.w3.org/ns/prov#atTime> rdf:type owl:DatatypeProperty ;
+                                   rdfs:label "at time" .
+
+
+###  http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> rdf:type owl:DatatypeProperty ;
+                                       rdfs:label "result time" .
+
+
+###  https://w3id.org/h2v#forecastedForTime
+:forecastedForTime rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Forecast ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "This property links a Forecast to the time in the future that the Forecast refers to." ;
+                   rdfs:label "forecasted for time" .
+
+
+###  https://w3id.org/h2v#issuedAtTime
+:issuedAtTime rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Forecast ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "This property link a Forecast to the time when a Forecast has been issued." ;
+              rdfs:label "issued at time" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class ;
+                                            rdfs:label "Quantity Value" .
+
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:label "Unit" .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:label "Feature" .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:label "Geometry" .
+
+
+###  http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
+                                     rdfs:label "Activity" .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
+                                               rdfs:label "Observable Property" .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class ;
+                                        rdfs:label "Observation" .
+
+
+###  http://www.w3.org/ns/ssn/Property
+<http://www.w3.org/ns/ssn/Property> rdf:type owl:Class ;
+                                    rdfs:label "Property" .
+
+
+###  http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> rdf:type owl:Class ;
+                                  rdfs:label "System" .
+
+
+###  https://w3id.org/h2v#DynamicProperty
+:DynamicProperty rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                 rdfs:comment "A Dynamic Property is a time-varying Property of a System that is dynamically observed or measured." ;
+                 rdfs:label "Dynamic Property" .
+
+
+###  https://w3id.org/h2v#ElectricityProductionArea
+:ElectricityProductionArea rdf:type owl:Class ;
+                           rdfs:subClassOf :HydrogenValleyArea ;
+                           rdfs:comment "An Electricity Production Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)." ;
+                           rdfs:label "Electricity Production Area" .
+
+
+###  https://w3id.org/h2v#Electrolyzer
+:Electrolyzer rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+              rdfs:comment "An Electrolyzer is a system that uses electrical energy to split water into hydrogen and oxygen." ;
+              rdfs:label "Electrolyzer" .
+
+
+###  https://w3id.org/h2v#Forecast
+:Forecast rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+          rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some property, based on models, data, or prior observations." ;
+          rdfs:label "Forecast" .
+
+
+###  https://w3id.org/h2v#HydrogenAllocation
+:HydrogenAllocation rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+                    rdfs:comment "An Hydrogen Allocation is an activity in which an amount of hydrogen is allocated by a System, usually an Hydrogen Valley, to another System (e.g., an Hydrogen Consumer)." ;
+                    rdfs:label "Hydrogen Allocation" .
+
+
+###  https://w3id.org/h2v#HydrogenConsumer
+:HydrogenConsumer rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                  rdfs:comment "A Hydrogen Consumer is a system that uses hydrogen for various purposes, such as industry, transportation, or energy production. " ;
+                  rdfs:label "Hydrogen Consumer" .
+
+
+###  https://w3id.org/h2v#HydrogenConsumptionArea
+:HydrogenConsumptionArea rdf:type owl:Class ;
+                         rdfs:subClassOf :HydrogenValleyArea ;
+                         rdfs:comment "A Hydrogen Consumption Area is the geographical polygon where the hydrogen consumer is located (given by a list of coordinates)." ;
+                         rdfs:label "Hydrogen Consumption Area" .
+
+
+###  https://w3id.org/h2v#HydrogenImportExport
+:HydrogenImportExport rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+                      rdfs:comment "An Hydrogen Import Export is an activity in which an amount of hydrogen is exchanged between two systems, that is, an hydrogen importer and an hydrogen exporter." ;
+                      rdfs:label "Hydrogen Import Export" .
+
+
+###  https://w3id.org/h2v#HydrogenProductionArea
+:HydrogenProductionArea rdf:type owl:Class ;
+                        rdfs:subClassOf :HydrogenValleyArea ;
+                        rdfs:comment "A Hydrogen Production Area is the geographical polygon where the electrolyzer is located (given by a list of coordinates)." ;
+                        rdfs:label "Hydrogen Production Area" .
+
+
+###  https://w3id.org/h2v#HydrogenStorage
+:HydrogenStorage rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                 rdfs:comment "A Hydrogen Storage is the system for storing the produced hydrogen, which can be stored in compressed gaseous form, as a liquid, or through other methods. Hydrogen storage is essential to ensure system flexibility and to balance energy production and demand. TheHydrogen Storage is the interface for import/export operations." ;
+                 rdfs:label "Hydrogen Storage" .
+
+
+###  https://w3id.org/h2v#HydrogenStorageArea
+:HydrogenStorageArea rdf:type owl:Class ;
+                     rdfs:subClassOf :HydrogenValleyArea ;
+                     rdfs:comment "A Hydrogen Storage Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)." ;
+                     rdfs:label "Hydrogen Storage Area" .
+
+
+###  https://w3id.org/h2v#HydrogenValley
+:HydrogenValley rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                rdfs:comment "A Hydrogen Valley (HV) is a geographic area—such as a city, region, island, or industrial cluster—where various hydrogen applications are combined into an integrated hydrogen ecosystem that consumes a significant amount of hydrogen. An Hydrogen Valley can therefore encompass the entire hydrogen value chain: production, storage, distribution, and end use." ;
+                rdfs:label "Hydrogen Valley" .
+
+
+###  https://w3id.org/h2v#HydrogenValleyArea
+:HydrogenValleyArea rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                    rdfs:comment "A Hydrogen Valley Area is a System within a Hydrogen Valley that corresponds to a zone where specific hydrogen-related activities, like hydrogen storage or consumption, take place. An HydrogenValleyArea has at least one SubSystem. " ;
+                    rdfs:label "Hydrogen Valley Area" .
+
+
+###  https://w3id.org/h2v#HydrogenValleyComponent
+:HydrogenValleyComponent rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                         rdfs:comment "A Hydrogen Valley Component is a System within a Hydrogen Valley that contributes to the hydrogen value chain, such as hydrogen production. " ;
+                         rdfs:label "Hydrogen Valley Component" .
+
+
+###  https://w3id.org/h2v#PhotovoltaicSystem
+:PhotovoltaicSystem rdf:type owl:Class ;
+                    rdfs:subClassOf :RESPlant ;
+                    rdfs:comment "A Photovoltaic System is a complete electrical system that generates electricity from sunlight using solar panels. It comprises various components, including solar panels, inverters, and potentially batteries." ;
+                    rdfs:label "Photovoltaic System" ;
+                    rdfs:seeAlso "https://cim.fein-aachen.org/libcimpp/doc/IEC61970_17v23/classIEC61970_1_1Base_1_1Generation_1_1Production_1_1PhotoVoltaicUnit.html" .
+
+
+###  https://w3id.org/h2v#Pipe
+:Pipe rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+      rdfs:comment "A Hydrogen Pipe is the system used to transport hydrogen gas across the different systems of a HV." ;
+      rdfs:label "Pipe" .
+
+
+###  https://w3id.org/h2v#PointDevice
+:PointDevice rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+             rdfs:comment "A Point Device is the transfer point of the HV with the gas network." ;
+             rdfs:label "Point Device" .
+
+
+###  https://w3id.org/h2v#RESPlant
+:RESPlant rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+          rdfs:comment "A RES Plant is renewable energy system that powers the electrolyzer. This can be a photovoltaic, wind, hydroelectric, or geothermal plant. Its capacity and production profile directly affect the amount of green hydrogen that can be generated." ;
+          rdfs:label "R E S Plant" .
+
+
+###  https://w3id.org/h2v#StaticProperty
+:StaticProperty rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                rdfs:comment "A Static Property is a nominal Property of a System, typically defined by design or manufacturer specifications, that is not meant to be dynamically observed" ;
+                rdfs:label "Static Property" .
+
+
+###  https://w3id.org/h2v#WeatherForecast
+:WeatherForecast rdf:type owl:Class ;
+                 rdfs:subClassOf :Forecast ;
+                 rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some weather property, based on models, data, or prior observations." ;
+                 rdfs:label "Weather Forecast" .
+
+
+###  https://w3id.org/h2v#WeatherProperty
+:WeatherProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :DynamicProperty ;
+                 rdfs:comment "A Weather Property is a specific type of Dynamic Property related to the weather." ;
+                 rdfs:label "Weather Property" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

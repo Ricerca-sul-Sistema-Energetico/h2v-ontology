@@ -1,0 +1,2243 @@
+@prefix : <https://w3id.org/h2v/property#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/h2v/property#> .
+
+<https://w3id.org/h2v/property#> rdf:type owl:Ontology ;
+                                  owl:versionIRI <https://w3id.org/h2v/1.0.0> ;
+                                  <http://purl.org/dc/elements/1.1/contributor> "Claudio Sesto (RSE)" ,
+                                                                                "Francesca Soldan (RSE)" ,
+                                                                                "Ilaria Baroni (Cefriel)" ,
+                                                                                "Irene Celino (Cefriel)" ;
+                                  <http://purl.org/dc/elements/1.1/creator> "Gloria Re Calegari (Cefriel)" ,
+                                                                            "Valentina Carriero (Cefriel)" ;
+                                  <http://purl.org/dc/elements/1.1/title> "Hydrogen Valley Ontology (H2V) - Property module" ;
+                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                  <http://purl.org/dc/terms/publisher> "Cefriel" ;
+                                  <http://purl.org/ontology/bibo/status> "Published"@en ;
+                                  rdfs:label "Hydrogen Valley Ontology (H2V) - Property module" ;
+                                  owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/h2v/property#hasActualGlobalEfficiency
+:hasActualGlobalEfficiency rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                           rdfs:range :ActualGlobalEfficiency ;
+                           rdfs:label "has actual global efficiency" .
+
+
+###  https://w3id.org/h2v/property#hasActualH2OPipe
+:hasActualH2OPipe rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                  rdfs:range :ActualH2OPipe ;
+                  rdfs:label "has actual h2o pipe" .
+
+
+###  https://w3id.org/h2v/property#hasActualH2OPointDevice
+:hasActualH2OPointDevice rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                         rdfs:range :ActualH2OPointDevice ;
+                         rdfs:label "has actual h2o point device" .
+
+
+###  https://w3id.org/h2v/property#hasActualModuleTemperature
+:hasActualModuleTemperature rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                            rdfs:range :ActualModuleTemperature ;
+                            rdfs:label "has actual module temperature" .
+
+
+###  https://w3id.org/h2v/property#hasActualN2Pipe
+:hasActualN2Pipe rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                 rdfs:range :ActualN2Pipe ;
+                 rdfs:label "has actual n2 pipe" .
+
+
+###  https://w3id.org/h2v/property#hasActualN2PointDevice
+:hasActualN2PointDevice rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                        rdfs:range :ActualN2PointDevice ;
+                        rdfs:label "has actual n2 point device" .
+
+
+###  https://w3id.org/h2v/property#hasActualO2Pipe
+:hasActualO2Pipe rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                 rdfs:range :ActualO2Pipe ;
+                 rdfs:label "has actual o2 pipe" .
+
+
+###  https://w3id.org/h2v/property#hasActualO2PointDevice
+:hasActualO2PointDevice rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                        rdfs:range :ActualO2PointDevice ;
+                        rdfs:label "has actual o2 point device" .
+
+
+###  https://w3id.org/h2v/property#hasActualPlaneOfArrayIrradiancePOA
+:hasActualPlaneOfArrayIrradiancePOA rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                                    rdfs:range :ActualPlaneOfArrayIrradiancePOA ;
+                                    rdfs:label "has actual plane of array irradiance poa" .
+
+
+###  https://w3id.org/h2v/property#hasActualPowerProduction
+:hasActualPowerProduction rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                          rdfs:range :ActualPowerProduction ;
+                          rdfs:label "has actual power production" .
+
+
+###  https://w3id.org/h2v/property#hasActualStorageSizeMax
+:hasActualStorageSizeMax rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                         rdfs:range :ActualStorageSizeMax ;
+                         rdfs:label "has actual storage size max" .
+
+
+###  https://w3id.org/h2v/property#hasAmountOfHydrogenStored
+:hasAmountOfHydrogenStored rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                           rdfs:range :AmountOfHydrogenStored ;
+                           rdfs:label "has amount of hydrogen stored" .
+
+
+###  https://w3id.org/h2v/property#hasAmountOfStoredDistilledWater
+:hasAmountOfStoredDistilledWater rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                                 rdfs:range :AmountOfStoredDistilledWater ;
+                                 rdfs:label "has amount of stored distilled water" .
+
+
+###  https://w3id.org/h2v/property#hasChemicalCompositionPipe
+:hasChemicalCompositionPipe rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                            rdfs:range :ChemicalCompositionPipe ;
+                            rdfs:label "has chemical composition pipe" .
+
+
+###  https://w3id.org/h2v/property#hasChemicalCompositionPointDevice
+:hasChemicalCompositionPointDevice rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                                   rdfs:range :ChemicalCompositionPointDevice ;
+                                   rdfs:label "has chemical composition point device" .
+
+
+###  https://w3id.org/h2v/property#hasCurrentHydrogenExported
+:hasCurrentHydrogenExported rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                            rdfs:range :CurrentHydrogenExported ;
+                            rdfs:label "has current hydrogen exported" .
+
+
+###  https://w3id.org/h2v/property#hasCurrentHydrogenImported
+:hasCurrentHydrogenImported rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                            rdfs:range :CurrentHydrogenImported ;
+                            rdfs:label "has current hydrogen imported" .
+
+
+###  https://w3id.org/h2v/property#hasDistilledWaterTemperature
+:hasDistilledWaterTemperature rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                              rdfs:range :DistilledWaterTemperature ;
+                              rdfs:label "has distilled water temperature" .
+
+
+###  https://w3id.org/h2v/property#hasDistilledWaterTemperatureRange
+:hasDistilledWaterTemperatureRange rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                                   rdfs:range :DistilledWaterTemperatureRange ;
+                                   rdfs:label "has distilled water temperature range" .
+
+
+###  https://w3id.org/h2v/property#hasElectricPower
+:hasElectricPower rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                  rdfs:range :ElectricPower ;
+                  rdfs:label "has electric power" .
+
+
+###  https://w3id.org/h2v/property#hasElectricPowerRange
+:hasElectricPowerRange rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                       rdfs:range :ElectricPowerRange ;
+                       rdfs:label "has electric power range" .
+
+
+###  https://w3id.org/h2v/property#hasEnvironmentalTemperatureRange
+:hasEnvironmentalTemperatureRange rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                                  rdfs:range :EnvironmentalTemperatureRange ;
+                                  rdfs:label "has environmental temperature range" .
+
+
+###  https://w3id.org/h2v/property#hasEnvironmentalWindSpeedRange
+:hasEnvironmentalWindSpeedRange rdf:type owl:ObjectProperty ;
+                                rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                                rdfs:range :EnvironmentalWindSpeedRange ;
+                                rdfs:label "has environmental wind speed range" .
+
+
+###  https://w3id.org/h2v/property#hasExportedHydrogenFlowPressure
+:hasExportedHydrogenFlowPressure rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                                 rdfs:range :ExportedHydrogenFlowPressure ;
+                                 rdfs:label "has exported hydrogen flow pressure" .
+
+
+###  https://w3id.org/h2v/property#hasExportedHydrogenPressureRange
+:hasExportedHydrogenPressureRange rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                                  rdfs:range :ExportedHydrogenPressureRange ;
+                                  rdfs:label "has exported hydrogen pressure range" .
+
+
+###  https://w3id.org/h2v/property#hasForecastedGlobalEfficiency
+:hasForecastedGlobalEfficiency rdf:type owl:ObjectProperty ;
+                               rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                               rdfs:range :ForecastedGlobalEfficiency ;
+                               rdfs:label "has forecasted global efficiency" .
+
+
+###  https://w3id.org/h2v/property#hasForecastedModuleTemperature
+:hasForecastedModuleTemperature rdf:type owl:ObjectProperty ;
+                                rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                                rdfs:range :ForecastedModuleTemperature ;
+                                rdfs:label "has forecasted module temperature" .
+
+
+###  https://w3id.org/h2v/property#hasForecastedPlaneOfArrayIrradiancePOA
+:hasForecastedPlaneOfArrayIrradiancePOA rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                                        rdfs:range :ForecastedPlaneOfArrayIrradiancePOA ;
+                                        rdfs:label "has forecasted plane of array irradiance poa" .
+
+
+###  https://w3id.org/h2v/property#hasForecastedPowerProduction
+:hasForecastedPowerProduction rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                              rdfs:range :ForecastedPowerProduction ;
+                              rdfs:label "has forecasted power production" .
+
+
+###  https://w3id.org/h2v/property#hasGasCompositionRange
+:hasGasCompositionRange rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                        rdfs:range :GasCompositionRange ;
+                        rdfs:label "has gas composition range" .
+
+
+###  https://w3id.org/h2v/property#hasH2ORange
+:hasH2ORange rdf:type owl:ObjectProperty ;
+             rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+             rdfs:range :H2ORange ;
+             rdfs:label "has h2o range" .
+
+
+###  https://w3id.org/h2v/property#hasH2PressureRangeElectrolyzer
+:hasH2PressureRangeElectrolyzer rdf:type owl:ObjectProperty ;
+                                rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                                rdfs:range :H2PressureRangeElectrolyzer ;
+                                rdfs:label "has h2 pressure range electrolyzer" .
+
+
+###  https://w3id.org/h2v/property#hasH2PressureRangePointDevice
+:hasH2PressureRangePointDevice rdf:type owl:ObjectProperty ;
+                               rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                               rdfs:range :H2PressureRangePointDevice ;
+                               rdfs:label "has h2 pressure range point device" .
+
+
+###  https://w3id.org/h2v/property#hasH2ProductionRange
+:hasH2ProductionRange rdf:type owl:ObjectProperty ;
+                      rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                      rdfs:range :H2ProductionRange ;
+                      rdfs:label "has h2 production range" .
+
+
+###  https://w3id.org/h2v/property#hasH2TemperatureRange
+:hasH2TemperatureRange rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                       rdfs:range :H2TemperatureRange ;
+                       rdfs:label "has h2 temperature range" .
+
+
+###  https://w3id.org/h2v/property#hasHHV
+:hasHHV rdf:type owl:ObjectProperty ;
+        rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+        rdfs:range :HHV ;
+        rdfs:label "has hhv" .
+
+
+###  https://w3id.org/h2v/property#hasHHVRangeH2
+:hasHHVRangeH2 rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+               rdfs:range :HHVRangeH2 ;
+               rdfs:label "has hhv range h2" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenAllocated
+:hasHydrogenAllocated rdf:type owl:ObjectProperty ;
+                      rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                      rdfs:range :HydrogenAllocated ;
+                      rdfs:label "has hydrogen allocated" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenFlowDemand
+:hasHydrogenFlowDemand rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#HydrogenConsumer> ;
+                       rdfs:range :HydrogenFlowDemand ;
+                       rdfs:label "has hydrogen flow demand" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenFlowDemandRange
+:hasHydrogenFlowDemandRange rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#HydrogenConsumer> ;
+                            rdfs:range :HydrogenFlowDemandRange ;
+                            rdfs:label "has hydrogen flow demand range" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenMassFlow
+:hasHydrogenMassFlow rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                     rdfs:range :HydrogenMassFlow ;
+                     rdfs:label "has hydrogen mass flow" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenMassFlowInjectable
+:hasHydrogenMassFlowInjectable rdf:type owl:ObjectProperty ;
+                               rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                               rdfs:range :HydrogenMassFlowInjectable ;
+                               rdfs:label "has hydrogen mass flow injectable" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenPercentage
+:hasHydrogenPercentage rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                       rdfs:range :HydrogenPercentage ;
+                       rdfs:label "has hydrogen percentage " .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenPressureRange
+:hasHydrogenPressureRange rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://w3id.org/h2v#HydrogenConsumer> ;
+                          rdfs:range :HydrogenPressureRange ;
+                          rdfs:label "has hydrogen pressure range" .
+
+
+###  https://w3id.org/h2v/property#hasHydrogenpressure
+:hasHydrogenpressure rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://w3id.org/h2v#HydrogenConsumer> ;
+                     rdfs:range :Hydrogenpressure ;
+                     rdfs:label "has hydrogen pressure" .
+
+
+###  https://w3id.org/h2v/property#hasImportedHydrogenFlowPressure
+:hasImportedHydrogenFlowPressure rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                                 rdfs:range :ImportedHydrogenFlowPressure ;
+                                 rdfs:label "has imported hydrogen flow pressure" .
+
+
+###  https://w3id.org/h2v/property#hasImportedHydrogenPressureRange
+:hasImportedHydrogenPressureRange rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                                  rdfs:range :ImportedHydrogenPressureRange ;
+                                  rdfs:label "has imported hydrogen pressure range" .
+
+
+###  https://w3id.org/h2v/property#hasInputMassFlow
+:hasInputMassFlow rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                  rdfs:range :InputMassFlow ;
+                  rdfs:label "has input mass flow" .
+
+
+###  https://w3id.org/h2v/property#hasInputMassFlowRange
+:hasInputMassFlowRange rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                       rdfs:range :InputMassFlowRange ;
+                       rdfs:label "has input mass flow range " .
+
+
+###  https://w3id.org/h2v/property#hasInputPressure
+:hasInputPressure rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                  rdfs:range :InputPressure ;
+                  rdfs:label "has input pressure" .
+
+
+###  https://w3id.org/h2v/property#hasInputPressureRange
+:hasInputPressureRange rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                       rdfs:range :InputPressureRange ;
+                       rdfs:label "has input pressure range" .
+
+
+###  https://w3id.org/h2v/property#hasInputTemperature
+:hasInputTemperature rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                     rdfs:range :InputTemperature ;
+                     rdfs:label "has input temperature" .
+
+
+###  https://w3id.org/h2v/property#hasInputTemperatureRange
+:hasInputTemperatureRange rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                          rdfs:range :InputTemperatureRange ;
+                          rdfs:label "has input temperature range" .
+
+
+###  https://w3id.org/h2v/property#hasMassFlowPipe
+:hasMassFlowPipe rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                 rdfs:range :MassFlowPipe ;
+                 rdfs:label "has mass flow pipe" .
+
+
+###  https://w3id.org/h2v/property#hasMassFlowPointDevice
+:hasMassFlowPointDevice rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                        rdfs:range :MassFlowPointDevice ;
+                        rdfs:label "has mass flow point device" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumAmountofStoredDistilledWater
+:hasMaximumAmountofStoredDistilledWater rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                                        rdfs:range :MaximumAmountofStoredDistilledWater ;
+                                        rdfs:label "has maximum amount of stored distilled water" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumDepthofDischarge
+:hasMaximumDepthofDischarge rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                            rdfs:range :MaximumDepthofDischarge ;
+                            rdfs:label "has maximum depth of discharge" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumHydrogenVolumePercentage
+:hasMaximumHydrogenVolumePercentage rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                                    rdfs:range :MaximumHydrogenVolumePercentage ;
+                                    rdfs:label "has maximum hydrogen volume percentage" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumMassFlowPipe
+:hasMaximumMassFlowPipe rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                        rdfs:range :MaximumMassFlowPipe ;
+                        rdfs:label "has maximum mass flow pipe" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumMassFlowPointDevice
+:hasMaximumMassFlowPointDevice rdf:type owl:ObjectProperty ;
+                               rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                               rdfs:range :MaximumMassFlowPointDevice ;
+                               rdfs:label "has maximum mass flow point device" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumStorageSize
+:hasMaximumStorageSize rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                       rdfs:range :MaximumStorageSize ;
+                       rdfs:label "has maximum storage size" .
+
+
+###  https://w3id.org/h2v/property#hasMaximumWaterFlowRate
+:hasMaximumWaterFlowRate rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                         rdfs:range :MaximumWaterFlowRate ;
+                         rdfs:label "has maximum water flow rate" .
+
+
+###  https://w3id.org/h2v/property#hasN2Range
+:hasN2Range rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+            rdfs:range :N2Range ;
+            rdfs:label "has n2 range" .
+
+
+###  https://w3id.org/h2v/property#hasNominalChemicalCompositionToleratedPipe
+:hasNominalChemicalCompositionToleratedPipe rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                                            rdfs:range :NominalChemicalCompositionToleratedPipe ;
+                                            rdfs:label "has nominal chemical composition tolerated pipe" .
+
+
+###  https://w3id.org/h2v/property#hasNominalChemicalCompositionToleratedPointDevice
+:hasNominalChemicalCompositionToleratedPointDevice rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                                                   rdfs:range :NominalChemicalCompositionToleratedPointDevice ;
+                                                   rdfs:label "has nominal chemical composition tolerated point device" .
+
+
+###  https://w3id.org/h2v/property#hasNominalGlobalEfficiency
+:hasNominalGlobalEfficiency rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                            rdfs:range :NominalGlobalEfficiency ;
+                            rdfs:label "has nominal global efficiency" .
+
+
+###  https://w3id.org/h2v/property#hasNominalH2OToleratedPipe
+:hasNominalH2OToleratedPipe rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                            rdfs:range :NominalH2OToleratedPipe ;
+                            rdfs:label "has nominal h2o tolerated pipe" .
+
+
+###  https://w3id.org/h2v/property#hasNominalH2OToleratedPointDevice
+:hasNominalH2OToleratedPointDevice rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                                   rdfs:range :NominalH2OToleratedPointDevice ;
+                                   rdfs:label "has nominal h2o tolerated point device" .
+
+
+###  https://w3id.org/h2v/property#hasNominalModuleTemperature
+:hasNominalModuleTemperature rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                             rdfs:range :NominalModuleTemperature ;
+                             rdfs:label "has nominal module temperature" .
+
+
+###  https://w3id.org/h2v/property#hasNominalN2ToleratedPipe
+:hasNominalN2ToleratedPipe rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                           rdfs:range :NominalN2ToleratedPipe ;
+                           rdfs:label "has nominal n2 tolerated pipe" .
+
+
+###  https://w3id.org/h2v/property#hasNominalN2ToleratedPointDevice
+:hasNominalN2ToleratedPointDevice rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                                  rdfs:range :NominalN2ToleratedPointDevice ;
+                                  rdfs:label "has nominal n2 tolerated point device" .
+
+
+###  https://w3id.org/h2v/property#hasNominalO2ToleratedPipe
+:hasNominalO2ToleratedPipe rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                           rdfs:range :NominalO2ToleratedPipe ;
+                           rdfs:label "has nominal o2 tolerated pipe" .
+
+
+###  https://w3id.org/h2v/property#hasNominalO2ToleratedPointDevice
+:hasNominalO2ToleratedPointDevice rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                                  rdfs:range :NominalO2ToleratedPointDevice ;
+                                  rdfs:label "has nominal o2 tolerated point device" .
+
+
+###  https://w3id.org/h2v/property#hasNominalPower
+:hasNominalPower rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+                 rdfs:range :NominalPower ;
+                 rdfs:label "has nominal power" .
+
+
+###  https://w3id.org/h2v/property#hasNominalStorageLeakage
+:hasNominalStorageLeakage rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                          rdfs:range :NominalStorageLeakage ;
+                          rdfs:label "has nominal storage leakage" .
+
+
+###  https://w3id.org/h2v/property#hasO2Range
+:hasO2Range rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+            rdfs:range :O2Range ;
+            rdfs:label "has o2 range" .
+
+
+###  https://w3id.org/h2v/property#hasOutputH2Pressure
+:hasOutputH2Pressure rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                     rdfs:range :OutputH2Pressure ;
+                     rdfs:label "has output h2 pressure" .
+
+
+###  https://w3id.org/h2v/property#hasOutputH2Temperature
+:hasOutputH2Temperature rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                        rdfs:range :OutputH2Temperature ;
+                        rdfs:label "has output h2 temperature" .
+
+
+###  https://w3id.org/h2v/property#hasOutputMassFlow
+:hasOutputMassFlow rdf:type owl:ObjectProperty ;
+                   rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                   rdfs:range :OutputMassFlow ;
+                   rdfs:label "has output mass flow" .
+
+
+###  https://w3id.org/h2v/property#hasPressureH2Pipe
+:hasPressureH2Pipe rdf:type owl:ObjectProperty ;
+                   rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                   rdfs:range :PressureH2Pipe ;
+                   rdfs:label "has pressure h2 pipe" .
+
+
+###  https://w3id.org/h2v/property#hasPressureH2PointDevice
+:hasPressureH2PointDevice rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                          rdfs:range :PressureH2PointDevice ;
+                          rdfs:label "has pressure h2 point device" .
+
+
+###  https://w3id.org/h2v/property#hasPressureRange
+:hasPressureRange rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/h2v#Pipe> ;
+                  rdfs:range :PressureRange ;
+                  rdfs:label "has pressure range" .
+
+
+###  https://w3id.org/h2v/property#hasRatioH2
+:hasRatioH2 rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+            rdfs:range :RatioH2 ;
+            rdfs:label "has ratio h2" .
+
+
+###  https://w3id.org/h2v/property#hasStateOfCharge
+:hasStateOfCharge rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                  rdfs:range :StateOfCharge ;
+                  rdfs:label "has state of charge" .
+
+
+###  https://w3id.org/h2v/property#hasStoragePressure
+:hasStoragePressure rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                    rdfs:range :StoragePressure ;
+                    rdfs:label "has storage pressure" .
+
+
+###  https://w3id.org/h2v/property#hasStoragePressureRange
+:hasStoragePressureRange rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                         rdfs:range :StoragePressureRange ;
+                         rdfs:label "has storage pressure range" .
+
+
+###  https://w3id.org/h2v/property#hasStorageTemperature
+:hasStorageTemperature rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                       rdfs:range :StorageTemperature ;
+                       rdfs:label "has storage temperature" .
+
+
+###  https://w3id.org/h2v/property#hasStorageTemperatureRange
+:hasStorageTemperatureRange rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://w3id.org/h2v#HydrogenStorage> ;
+                            rdfs:range :StorageTemperatureRange ;
+                            rdfs:label "has storage temperature range" .
+
+
+###  https://w3id.org/h2v/property#hasSystemArea
+:hasSystemArea rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://w3id.org/h2v#PVsystem> ;
+               rdfs:range :SystemArea ;
+               rdfs:label "has system area" .
+
+
+###  https://w3id.org/h2v/property#hasSystemSpecificEnergy
+:hasSystemSpecificEnergy rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                         rdfs:range :SystemSpecificEnergy ;
+                         rdfs:label "has system specific energy" .
+
+
+###  https://w3id.org/h2v/property#hasWaterConductivityRange
+:hasWaterConductivityRange rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                           rdfs:range :WaterConductivityRange ;
+                           rdfs:label "has water conductivity range" .
+
+
+###  https://w3id.org/h2v/property#hasWaterFlow
+:hasWaterFlow rdf:type owl:ObjectProperty ;
+              rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+              rdfs:range :WaterFlow ;
+              rdfs:label "has water flow" .
+
+
+###  https://w3id.org/h2v/property#hasWaterPHRange
+:hasWaterPHRange rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/h2v#Electrolyzer> ;
+                 rdfs:range :WaterPHRange ;
+                 rdfs:label "has water ph range" .
+
+
+###  https://w3id.org/h2v/property#hasWobbeIndex
+:hasWobbeIndex rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+               rdfs:range :WobbeIndex ;
+               rdfs:label "has wobbe index" .
+
+
+###  https://w3id.org/h2v/property#hasWobbeIndexRange
+:hasWobbeIndexRange rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://w3id.org/h2v#PointDevice> ;
+                    rdfs:range :WobbeIndexRange ;
+                    rdfs:label "has wobbe index range" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/applicableUnit
+<http://qudt.org/schema/qudt/applicableUnit> rdf:type owl:DatatypeProperty .
+
+
+###  http://qudt.org/schema/qudt/hasQuantityKind
+<http://qudt.org/schema/qudt/hasQuantityKind> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/h2v#Electrolyzer
+<https://w3id.org/h2v#Electrolyzer> rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v#HydrogenConsumer
+<https://w3id.org/h2v#HydrogenConsumer> rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v#HydrogenStorage
+<https://w3id.org/h2v#HydrogenStorage> rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v#PVsystem
+<https://w3id.org/h2v#PVsystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v#Pipe
+<https://w3id.org/h2v#Pipe> rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v#PointDevice
+<https://w3id.org/h2v#PointDevice> rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v/property#ActualGlobalEfficiency
+:ActualGlobalEfficiency rdf:type owl:Class ;
+                        rdfs:subClassOf :DynamicProperty ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                          owl:hasValue "unit:ONE-PER-ONE"
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                          owl:hasValue "quantitykind:Efficiency"
+                                        ] ;
+                        rdfs:comment "The Actual Global Efficiency  [-] of the PV system of the HV is the overall system's energy conversion efficiency calculated based on actual measured inputs and outputs under real operating conditions" ;
+                        rdfs:label "Actual Global Efficiency" .
+
+
+###  https://w3id.org/h2v/property#ActualH2OPipe
+:ActualH2OPipe rdf:type owl:Class ;
+               rdfs:subClassOf :DynamicProperty ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                 owl:hasValue "unit:PPM"
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                 owl:hasValue "quantitykind:DimensionlessRatio"
+                               ] ;
+               rdfs:comment "The Actual H2O [ppm] is the actual amount of water vapor in the hydrogen gas across the pipe of the HV" ;
+               rdfs:label "Actual H2O Pipe" .
+
+
+###  https://w3id.org/h2v/property#ActualH2OPointDevice
+:ActualH2OPointDevice rdf:type owl:Class ;
+                      rdfs:subClassOf :DynamicProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                        owl:hasValue "unit:PPM"
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                        owl:hasValue "quantitykind:DimensionlessRatio"
+                                      ] ;
+                      rdfs:comment "The Actual H2O [ppm] is the actual quantity of water vapor in the hydrogen mixture fed into the gas network" ;
+                      rdfs:label "Actual H2O Point Device" .
+
+
+###  https://w3id.org/h2v/property#ActualModuleTemperature
+:ActualModuleTemperature rdf:type owl:Class ;
+                         rdfs:subClassOf :DynamicProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:DEG_C"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:Temperature"
+                                         ] ;
+                         rdfs:comment "The Actual Module Temperature [°C] of the PV system of the HV is the actual PV module temperature, used for efficiency calculation, dependent on wind and enviromental temperature" ;
+                         rdfs:label "Actual Module Temperature" .
+
+
+###  https://w3id.org/h2v/property#ActualN2Pipe
+:ActualN2Pipe rdf:type owl:Class ;
+              rdfs:subClassOf :DynamicProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                owl:hasValue "unit:PPM"
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                owl:hasValue "quantitykind:DimensionlessRatio"
+                              ] ;
+              rdfs:comment "The Actual N2 [ppm] is the actual amount of nitrogen in the hydrogen gas across the pipe of the HV" ;
+              rdfs:label "Actual N2 Pipe" .
+
+
+###  https://w3id.org/h2v/property#ActualN2PointDevice
+:ActualN2PointDevice rdf:type owl:Class ;
+                     rdfs:subClassOf :DynamicProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                       owl:hasValue "unit:PPM"
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                       owl:hasValue "quantitykind:DimensionlessRatio"
+                                     ] ;
+                     rdfs:comment "The Actual N2 [ppm] is the actual quantity of nitrogen in the hydrogen mixture fed into the gas network" ;
+                     rdfs:label "Actual N2 Point Device" .
+
+
+###  https://w3id.org/h2v/property#ActualO2Pipe
+:ActualO2Pipe rdf:type owl:Class ;
+              rdfs:subClassOf :DynamicProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                owl:hasValue "unit:PPM"
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                owl:hasValue "quantitykind:DimensionlessRatio"
+                              ] ;
+              rdfs:comment "The Actual O2 [ppm] is the actual amount of oxigen in the hydrogen gas across the pipe of the HV" ;
+              rdfs:label "Actual O2 Pipe" .
+
+
+###  https://w3id.org/h2v/property#ActualO2PointDevice
+:ActualO2PointDevice rdf:type owl:Class ;
+                     rdfs:subClassOf :DynamicProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                       owl:hasValue "unit:PPM"
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                       owl:hasValue "quantitykind:DimensionlessRatio"
+                                     ] ;
+                     rdfs:comment "The Actual O2 [ppm] is the actual quantity of oxigen in the hydrogen mixture fed into the gas network" ;
+                     rdfs:label "Actual O2 Point Device" .
+
+
+###  https://w3id.org/h2v/property#ActualPlaneOfArrayIrradiancePOA
+:ActualPlaneOfArrayIrradiancePOA rdf:type owl:Class ;
+                                 rdfs:subClassOf :DynamicProperty ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                   owl:hasValue "unit:KiloW-HR-PER-M2"
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                   owl:hasValue "quantitykind:EnergyPerArea"
+                                                 ] ;
+                                 rdfs:comment "The Actual Plane Of Array Irradiance POA [kWh/m2] is the actual usable solar energy expected to reach the PV panels (per square meter of useful surface) over a certain time period. It is the GHI and its component (direct, diffusive and albedo) adjusted by each possible losses such as incindence angle, shading, soiling, etc" ;
+                                 rdfs:label "Actual Plane Of Array Irradiance POA" .
+
+
+###  https://w3id.org/h2v/property#ActualPowerProduction
+:ActualPowerProduction rdf:type owl:Class ;
+                       rdfs:subClassOf :DynamicProperty ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                         owl:hasValue "unit:KiloW"
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                         owl:hasValue "quantitykind:ElectricPower"
+                                       ] ;
+                       rdfs:comment "The Actual Power Production [kW] of the PV system of the HV is the average power output, updated using actual performance data" ;
+                       rdfs:label "Actual Power Production" .
+
+
+###  https://w3id.org/h2v/property#ActualStorageSizeMax
+:ActualStorageSizeMax rdf:type owl:Class ;
+                      rdfs:subClassOf :DynamicProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                        owl:hasValue "unit:KiloGM"
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                        owl:hasValue "quantitykind:Mass"
+                                      ] ;
+                      rdfs:comment "The Actual Storage Size Max [kg] of the storage of the HV is the maximum quantity of hydrogen that can be stored based on thermodynamic conditions" ;
+                      rdfs:label "Actual Storage Size Max" .
+
+
+###  https://w3id.org/h2v/property#AmountOfHydrogenStored
+:AmountOfHydrogenStored rdf:type owl:Class ;
+                        rdfs:subClassOf :DynamicProperty ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                          owl:hasValue "unit:KiloGM"
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                          owl:hasValue "quantitykind:Mass"
+                                        ] ;
+                        rdfs:comment "The Amount Of Hydrogen Stored [kg] is the quantity of hydrogen stored in the storage unit" ;
+                        rdfs:label "Amount Of Hydrogen Stored" .
+
+
+###  https://w3id.org/h2v/property#AmountOfStoredDistilledWater
+:AmountOfStoredDistilledWater rdf:type owl:Class ;
+                              rdfs:subClassOf :DynamicProperty ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                owl:hasValue "unit:KiloGM"
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                owl:hasValue "quantitykind:Mass"
+                                              ] ;
+                              rdfs:comment "The Amount Of Stored Distilled Water [kg] of the electrolyzer is the measured distilled water contained in water storage of the electrolyzer" ;
+                              rdfs:label "Amount Of Stored Distilled Water" .
+
+
+###  https://w3id.org/h2v/property#ChemicalCompositionPipe
+:ChemicalCompositionPipe rdf:type owl:Class ;
+                         rdfs:subClassOf :DynamicProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:PPM"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:DimensionlessRatio"
+                                         ] ;
+                         rdfs:comment "The Chemical Composition [ppm] is the actual chemical composition of the hydrogen gas in the pipe (actual O2, actual H2O and actual N2), as measured at a certain time" ;
+                         rdfs:label "Chemical Composition Pipe" .
+
+
+###  https://w3id.org/h2v/property#ChemicalCompositionPointDevice
+:ChemicalCompositionPointDevice rdf:type owl:Class ;
+                                rdfs:subClassOf :DynamicProperty ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                  owl:hasValue "unit:PPM"
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                  owl:hasValue "quantitykind:DimensionlessRatio"
+                                                ] ;
+                                rdfs:comment "The Chemical Composition [ppm] is the actual chemical composition of hydrogen fed into the gas network" ;
+                                rdfs:label "Chemical Composition Point Device" .
+
+
+###  https://w3id.org/h2v/property#CurrentHydrogenExported
+:CurrentHydrogenExported rdf:type owl:Class ;
+                         rdfs:subClassOf :DynamicProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:KiloGM"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:Mass"
+                                         ] ;
+                         rdfs:comment "The Current Hydrogen Exported [kg] is the amount of hydrogen exported from the hydrogen storage facility" ;
+                         rdfs:label "Current Hydrogen Exported" .
+
+
+###  https://w3id.org/h2v/property#CurrentHydrogenImported
+:CurrentHydrogenImported rdf:type owl:Class ;
+                         rdfs:subClassOf :DynamicProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:KiloGM"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:Mass"
+                                         ] ;
+                         rdfs:comment "The Current Hydrogen Imported [kg] is the amount of hydrogen imported into the hydrogen storage facility" ;
+                         rdfs:label "Current Hydrogen Imported" .
+
+
+###  https://w3id.org/h2v/property#DistilledWaterTemperature
+:DistilledWaterTemperature rdf:type owl:Class ;
+                           rdfs:subClassOf :DynamicProperty ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                             owl:hasValue "unit:DEG_C"
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                             owl:hasValue "quantitykind:Temperature"
+                                           ] ;
+                           rdfs:comment "The Distilled Water Temperature [°C] of the electrolyzer of the HV is the measured water temperature to be compared with the allowed range" ;
+                           rdfs:label "Distilled Water Temperature" .
+
+
+###  https://w3id.org/h2v/property#DistilledWaterTemperatureRange
+:DistilledWaterTemperatureRange rdf:type owl:Class ;
+                                rdfs:subClassOf :StaticProperty ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                  owl:hasValue "unit:DEG_C"
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                  owl:hasValue "quantitykind:Temperature"
+                                                ] ;
+                                rdfs:comment "The Distilled Water Temperature Range [°C] of the electrolyzer of the HV is the range of temperature of the water stream allowed in the system" ;
+                                rdfs:label "Distilled Water Temperature Range" .
+
+
+###  https://w3id.org/h2v/property#DynamicProperty
+:DynamicProperty rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v/property#ElectricPower
+:ElectricPower rdf:type owl:Class ;
+               rdfs:subClassOf :DynamicProperty ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                 owl:hasValue "unit:KiloW"
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                 owl:hasValue "quantitykind:ElectricPower"
+                               ] ;
+               rdfs:comment "The Electric Power [kW] of the electrolyzer of the HV is the available electric power absorbed by the electrolyzer" ;
+               rdfs:label "Electric Power" .
+
+
+###  https://w3id.org/h2v/property#ElectricPowerRange
+:ElectricPowerRange rdf:type owl:Class ;
+                    rdfs:subClassOf :StaticProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:KiloW"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:ElectricPower"
+                                    ] ;
+                    rdfs:comment "The Electric Power Range [kW] of the electrolyzer of the HV is the range of electric power allowed by the electrolyzer, Pmax = Maximum power that can be absorbed by the electrolyzer without compromising the integrity of its components. Pmin = Minimum power at which the electrolyzer can operate without compromising the electrolysis reaction" ;
+                    rdfs:label "Electric Power Range" .
+
+
+###  https://w3id.org/h2v/property#EnvironmentalTemperature
+:EnvironmentalTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :WeatherProperty ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                            owl:hasValue "unit:DEG_C"
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                            owl:hasValue "quantitykind:Temperature"
+                                          ] ;
+                          rdfs:comment "The Environmental Temperature [°C] is the ambient air temperatures, in degrees Celsius. It can be either actual (i.e., based on an observation) or forecasted." ;
+                          rdfs:label "Environmental Temperature" .
+
+
+###  https://w3id.org/h2v/property#EnvironmentalTemperatureRange
+:EnvironmentalTemperatureRange rdf:type owl:Class ;
+                               rdfs:subClassOf :StaticProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                 owl:hasValue "unit:DEG_C"
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                 owl:hasValue "quantitykind:Temperature"
+                                               ] ;
+                               rdfs:comment "The Environmental Temperature Range [°C] of the PV system of the HV is the range of enviromental temperature which guarantees the good performance of the PV plant" ;
+                               rdfs:label "Environmental Temperature Range" .
+
+
+###  https://w3id.org/h2v/property#EnvironmentalWindSpeed
+:EnvironmentalWindSpeed rdf:type owl:Class ;
+                        rdfs:subClassOf :WeatherProperty ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                          owl:hasValue "unit:M-PER-SEC"
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                          owl:hasValue "quantitykind:Speed"
+                                        ] ;
+                        rdfs:comment "The Environmental Wind Speed [m/s] is the wind speed, in meter per second. It can be either actual (i.e., based on an observation) or forecasted." ;
+                        rdfs:label "Environmental Wind Speed" .
+
+
+###  https://w3id.org/h2v/property#EnvironmentalWindSpeedRange
+:EnvironmentalWindSpeedRange rdf:type owl:Class ;
+                             rdfs:subClassOf :StaticProperty ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                               owl:hasValue "unit:M-PER-SEC"
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                               owl:hasValue "quantitykind:Speed"
+                                             ] ;
+                             rdfs:comment "The Environmental Wind Speed Range [m/s] of the PV system of the HV is the range of wind speeds which guarantees the good performance of the PV plant" ;
+                             rdfs:label "Environmental Wind Speed Range" .
+
+
+###  https://w3id.org/h2v/property#ExportedHydrogenFlowPressure
+:ExportedHydrogenFlowPressure rdf:type owl:Class ;
+                              rdfs:subClassOf :DynamicProperty ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                owl:hasValue "unit:BAR"
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                owl:hasValue "quantitykind:Pressure"
+                                              ] ;
+                              rdfs:comment "The Exported Hydrogen Flow Pressure [bar] is the hydrogen flow pressure level during the export operations" ;
+                              rdfs:label "Exported Hydrogen Flow Pressure" .
+
+
+###  https://w3id.org/h2v/property#ExportedHydrogenPressureRange
+:ExportedHydrogenPressureRange rdf:type owl:Class ;
+                               rdfs:subClassOf :StaticProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                 owl:hasValue "unit:BAR"
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                 owl:hasValue "quantitykind:Pressure"
+                                               ] ;
+                               rdfs:comment "The Exported Hydrogen Pressure Range [bar] is the range (min – max) acceptable hydrogen pressure due to plants’ constraints for the export operations" ;
+                               rdfs:label "Exported Hydrogen Pressure Range" .
+
+
+###  https://w3id.org/h2v/property#ForecastedGlobalEfficiency
+:ForecastedGlobalEfficiency rdf:type owl:Class ;
+                            rdfs:subClassOf :DynamicProperty ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                              owl:hasValue "unit:ONE-PER-ONE"
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                              owl:hasValue "quantitykind:Efficiency"
+                                            ] ;
+                            rdfs:comment "The Forecasted Global Efficiency [-] of the PV system of the HV is the overall system's energy conversion efficiency calculated based on forecasted inputs and outputs under real operating conditions" ;
+                            rdfs:label "Forecasted Global Efficiency" .
+
+
+###  https://w3id.org/h2v/property#ForecastedModuleTemperature
+:ForecastedModuleTemperature rdf:type owl:Class ;
+                             rdfs:subClassOf :DynamicProperty ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                               owl:hasValue "unit:DEG_C"
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                               owl:hasValue "quantitykind:Temperature"
+                                             ] ;
+                             rdfs:comment "The Forecasted Module Temperature [°C] of the PV system of the HV is the predicted PV module temperature, used for efficiency calculation, dependent on wind and enviromental temperature" ;
+                             rdfs:label "Forecasted Module Temperature" .
+
+
+###  https://w3id.org/h2v/property#ForecastedPlaneOfArrayIrradiancePOA
+:ForecastedPlaneOfArrayIrradiancePOA rdf:type owl:Class ;
+                                     rdfs:subClassOf :DynamicProperty ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                       owl:hasValue "unit:KiloW-HR-PER-M2"
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                       owl:hasValue "quantitykind:EnergyPerArea"
+                                                     ] ;
+                                     rdfs:comment "The Forecasted Plane Of Array Irradiance POA [kWh/m2] is the forecasted usable solar energy expected to reach the PV panels (per square meter of useful surface) over a certain time period. It is the GHI and its component (direct, diffusive and albedo) adjusted by each possible losses such as incindence angle, shading, soiling, etc" ;
+                                     rdfs:label "Forecasted Plane Of Array Irradiance POA" .
+
+
+###  https://w3id.org/h2v/property#ForecastedPowerProduction
+:ForecastedPowerProduction rdf:type owl:Class ;
+                           rdfs:subClassOf :DynamicProperty ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                             owl:hasValue "unit:KiloW"
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                             owl:hasValue "quantitykind:ElectricPower"
+                                           ] ;
+                           rdfs:comment "The Forecasted Power Production [kW] of the PV system of the HV is the average power output, based on a forecast" ;
+                           rdfs:label "Forecasted Power Production" .
+
+
+###  https://w3id.org/h2v/property#GasCompositionRange
+:GasCompositionRange rdf:type owl:Class ;
+                     rdfs:subClassOf :StaticProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                       owl:hasValue "unit:PPM"
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                       owl:hasValue "quantitykind:DimensionlessRatio"
+                                     ] ;
+                     rdfs:comment "The Gas Composition Range [ppm] of the electrolyzer of the HV is the range composition of gas contaminant  (O2 Range, H2O Range and N2 Range) allowed in the mainstream to be exported to consumers downstream of the treatment systems" ;
+                     rdfs:label "Gas Composition Range" .
+
+
+###  https://w3id.org/h2v/property#GlobalHorizontalIrradiance
+:GlobalHorizontalIrradiance rdf:type owl:Class ;
+                            rdfs:subClassOf :WeatherProperty ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                              owl:hasValue "unit:W-PER-M2"
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                              owl:hasValue "quantitykind:PowerPerArea"
+                                            ] ;
+                            rdfs:comment "The Global Horizontal Irradiance [W/m2] is the usable solar energy expected to hit a specific surface (per square meter) over a certain time period, after accounting for various real-world loss factors. It can be either actual (i.e., based on an observation) or forecasted." ;
+                            rdfs:label "Global Horizontal Irradiance" .
+
+
+###  https://w3id.org/h2v/property#H2ORange
+:H2ORange rdf:type owl:Class ;
+          rdfs:subClassOf :StaticProperty ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                            owl:hasValue "unit:PPM"
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                            owl:hasValue "quantitykind:DimensionlessRatio"
+                          ] ;
+          rdfs:comment "The H2O Range [ppm] of the electrolyzer of the HV is the range of water vapor allowed in the mainstream to be exported to consumers downstream of the treatment systems" ;
+          rdfs:label "H2O Range" .
+
+
+###  https://w3id.org/h2v/property#H2PressureRangeElectrolyzer
+:H2PressureRangeElectrolyzer rdf:type owl:Class ;
+                             rdfs:subClassOf :StaticProperty ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                               owl:hasValue "unit:BAR"
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                               owl:hasValue "quantitykind:Pressure"
+                                             ] ;
+                             rdfs:comment "The H2 Pressure Range [bar] of the electrolyzer of the HV is the range of pressure of the hydrogen stream allowed as output of the system" ;
+                             rdfs:label "H2 Pressure Range Electrolyzer" .
+
+
+###  https://w3id.org/h2v/property#H2PressureRangePointDevice
+:H2PressureRangePointDevice rdf:type owl:Class ;
+                            rdfs:subClassOf :StaticProperty ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                              owl:hasValue "unit:BAR"
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                              owl:hasValue "quantitykind:Pressure"
+                                            ] ;
+                            rdfs:comment "The H2 Pressure Range [bar] is the range of pressure of the H2 within which hydrogen can be delivered to the gas network" ;
+                            rdfs:label "H2 Pressure Range Point Device" .
+
+
+###  https://w3id.org/h2v/property#H2ProductionRange
+:H2ProductionRange rdf:type owl:Class ;
+                   rdfs:subClassOf :StaticProperty ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                     owl:hasValue "unit:KiloGM-PER-HR"
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                     owl:hasValue "quantitykind:MassFlowRate"
+                                   ] ;
+                   rdfs:comment "The H2 Production Range [kg/h] of the electrolyzer of the HV is the maximum and minimum flow rate possible at the output of the electrolyzer " ;
+                   rdfs:label "H2 Production Range" .
+
+
+###  https://w3id.org/h2v/property#H2TemperatureRange
+:H2TemperatureRange rdf:type owl:Class ;
+                    rdfs:subClassOf :StaticProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:DEG_C"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:Temperature"
+                                    ] ;
+                    rdfs:comment "The H2 Temperature Range [°C] of the electrolyzer of the HV is the range of temperature of the hydrogen stream allowed as output of the system" ;
+                    rdfs:label "H2 Temperature Range" .
+
+
+###  https://w3id.org/h2v/property#HHV
+:HHV rdf:type owl:Class ;
+     rdfs:subClassOf :DynamicProperty ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                       owl:hasValue "unit:MegaJ-PER-M3"
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                       owl:hasValue "quantitykind:EnergyDensity"
+                     ] ;
+     rdfs:comment "The HHV [MJ/m^3] is the current calorific value of fuel on the gas network" ;
+     rdfs:label "HHV" .
+
+
+###  https://w3id.org/h2v/property#HHVRangeH2
+:HHVRangeH2 rdf:type owl:Class ;
+            rdfs:subClassOf :StaticProperty ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                              owl:hasValue "unit:MegaJ-PER-M3"
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                              owl:hasValue "quantitykind:EnergyDensity"
+                            ] ;
+            rdfs:comment "The HHV Range H2 [MJ/m^3] is the maximum and minimum upper calorific value of hydrogen accepted for gas (energy contained in the fuel per cubic metre under defined normal thermodynamic conditions)" ;
+            rdfs:label "HHV Range H2" .
+
+
+###  https://w3id.org/h2v/property#HydrogenAllocated
+:HydrogenAllocated rdf:type owl:Class ;
+                   rdfs:subClassOf :DynamicProperty ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                     owl:hasValue "unit:KiloGM"
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                     owl:hasValue "quantitykind:Mass"
+                                   ] ;
+                   rdfs:comment "The Hydrogen Allocated [Kg] is the amount of renewable hydrogen allocated to the Storage at a certain time" ;
+                   rdfs:label "Hydrogen Allocated" .
+
+
+###  https://w3id.org/h2v/property#HydrogenFlowDemand
+:HydrogenFlowDemand rdf:type owl:Class ;
+                    rdfs:subClassOf :DynamicProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:KiloGM-PER-HR"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:MassFlowRate"
+                                    ] ;
+                    rdfs:comment "The Hydrogen Flow Demand [kg/h] is the hydrogen flow demand requested by the consumption facility in order to satisfy its need" ;
+                    rdfs:label "Hydrogen Flow Demand" .
+
+
+###  https://w3id.org/h2v/property#HydrogenFlowDemandRange
+:HydrogenFlowDemandRange rdf:type owl:Class ;
+                         rdfs:subClassOf :StaticProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:KiloGM-PER-HR"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:MassFlowRate"
+                                         ] ;
+                         rdfs:comment "The Hydrogen Flow Demand Range [kg/h] is the range (min – max) acceptable hydrogen flow due to plants’ constraints" ;
+                         rdfs:label "Hydrogen Flow Demand Range" .
+
+
+###  https://w3id.org/h2v/property#HydrogenMassFlow
+:HydrogenMassFlow rdf:type owl:Class ;
+                  rdfs:subClassOf :DynamicProperty ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                    owl:hasValue "unit:KiloGM-PER-HR"
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                    owl:hasValue "quantitykind:MassFlowRate"
+                                  ] ;
+                  rdfs:comment "The Hydrogen Mass Flow [kg/h] of the electrolyzer of the HV is the  hydrogen flow at the output of the electrolyzer" ;
+                  rdfs:label "Hydrogen Mass Flow" .
+
+
+###  https://w3id.org/h2v/property#HydrogenMassFlowInjectable
+:HydrogenMassFlowInjectable rdf:type owl:Class ;
+                            rdfs:subClassOf :DynamicProperty ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                              owl:hasValue "unit:KiloGM-PER-HR"
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                              owl:hasValue "quantitykind:MassFlowRate"
+                                            ] ;
+                            rdfs:comment "The Hydrogen Mass Flow Injectable [kg/h] is the hydrogen flow that can be received from the gas network" ;
+                            rdfs:label "Hydrogen Mass Flow Injectable" .
+
+
+###  https://w3id.org/h2v/property#HydrogenPercentage
+:HydrogenPercentage rdf:type owl:Class ;
+                    rdfs:subClassOf :DynamicProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:PERCENT"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:DimensionlessRatio"
+                                    ] ;
+                    rdfs:comment "The Hydrogen Percentage [kgH2/kg gas] is the percentage of current hydrogen on the gas network " ;
+                    rdfs:label "Hydrogen Percentage " .
+
+
+###  https://w3id.org/h2v/property#HydrogenPressureRange
+:HydrogenPressureRange rdf:type owl:Class ;
+                       rdfs:subClassOf :StaticProperty ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                         owl:hasValue "unit:BAR"
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                         owl:hasValue "quantitykind:Pressure"
+                                       ] ;
+                       rdfs:comment "The Hydrogen Pressure Range [bar] is the range (min – max) acceptable hydrogen pressure due to plants’ constraints" ;
+                       rdfs:label "Hydrogen Pressure Range" .
+
+
+###  https://w3id.org/h2v/property#Hydrogenpressure
+:Hydrogenpressure rdf:type owl:Class ;
+                  rdfs:subClassOf :DynamicProperty ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                    owl:hasValue "unit:BAR"
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                    owl:hasValue "quantitykind:Pressure"
+                                  ] ;
+                  rdfs:comment "The Hydrogen pressure [bar] is the hydrogen flow pressure level" ;
+                  rdfs:label "Hydrogen pressure" .
+
+
+###  https://w3id.org/h2v/property#ImportedHydrogenFlowPressure
+:ImportedHydrogenFlowPressure rdf:type owl:Class ;
+                              rdfs:subClassOf :DynamicProperty ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                owl:hasValue "unit:BAR"
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                owl:hasValue "quantitykind:Pressure"
+                                              ] ;
+                              rdfs:comment "The Imported Hydrogen Flow Pressure [bar] is the hydrogen flow pressure level during the import operations" ;
+                              rdfs:label "Imported Hydrogen Flow Pressure" .
+
+
+###  https://w3id.org/h2v/property#ImportedHydrogenPressureRange
+:ImportedHydrogenPressureRange rdf:type owl:Class ;
+                               rdfs:subClassOf :StaticProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                 owl:hasValue "unit:BAR"
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                 owl:hasValue "quantitykind:Pressure"
+                                               ] ;
+                               rdfs:comment "The Imported Hydrogen Pressure Range [bar] is the range (min – max) acceptable hydrogen pressure due to plants’ constraints for the import  operations" ;
+                               rdfs:label "Imported Hydrogen Pressure Range" .
+
+
+###  https://w3id.org/h2v/property#InputMassFlow
+:InputMassFlow rdf:type owl:Class ;
+               rdfs:subClassOf :DynamicProperty ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                 owl:hasValue "unit:KiloGM-PER-HR"
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                 owl:hasValue "quantitykind:MassFlowRate"
+                               ] ;
+               rdfs:comment "The Input Mass Flow [kg/h] is the hydrogen input flow to storage" ;
+               rdfs:label "Input Mass Flow" .
+
+
+###  https://w3id.org/h2v/property#InputMassFlowRange
+:InputMassFlowRange rdf:type owl:Class ;
+                    rdfs:subClassOf :StaticProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:KiloGM-PER-HR"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:MassFlowRate"
+                                    ] ;
+                    rdfs:comment "The Input Mass Flow Range [kg/h] of the storage of the HV is the minimum and maximum hydrogen flow as input to storage" ;
+                    rdfs:label "Input Mass Flow Range " .
+
+
+###  https://w3id.org/h2v/property#InputPressure
+:InputPressure rdf:type owl:Class ;
+               rdfs:subClassOf :DynamicProperty ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                 owl:hasValue "unit:BAR"
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                 owl:hasValue "quantitykind:Pressure"
+                               ] ;
+               rdfs:comment "The Input Pressure [bar] of the storage of the HV is the hydrogen pressure as input to storage" ;
+               rdfs:label "Input Pressure" .
+
+
+###  https://w3id.org/h2v/property#InputPressureRange
+:InputPressureRange rdf:type owl:Class ;
+                    rdfs:subClassOf :StaticProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:BAR"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:Pressure"
+                                    ] ;
+                    rdfs:comment "The Input Pressure Range [bar] of the storage of the HV is the minimum and maximum hydrogen pressure allowed as input to storage" ;
+                    rdfs:label "Input Pressure Range" .
+
+
+###  https://w3id.org/h2v/property#InputTemperature
+:InputTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf :DynamicProperty ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                    owl:hasValue "unit:DEG_C"
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                    owl:hasValue "quantitykind:Temperature"
+                                  ] ;
+                  rdfs:comment "The Input Temperature [°C] of the storage of the HV is the hydrogen input temperature at storage" ;
+                  rdfs:label "Input Temperature" .
+
+
+###  https://w3id.org/h2v/property#InputTemperatureRange
+:InputTemperatureRange rdf:type owl:Class ;
+                       rdfs:subClassOf :StaticProperty ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                         owl:hasValue "unit:DEG_C"
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                         owl:hasValue "quantitykind:Temperature"
+                                       ] ;
+                       rdfs:comment "The Input Temperature Range [°C] of the storage of the HV is the minimum and maximum hydrogen temperature allowed as input to storage" ;
+                       rdfs:label "Input Temperature Range" .
+
+
+###  https://w3id.org/h2v/property#MassFlowPipe
+:MassFlowPipe rdf:type owl:Class ;
+              rdfs:subClassOf :DynamicProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                owl:hasValue "unit:KiloGM-PER-HR"
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                owl:hasValue "quantitykind:MassFlowRate"
+                              ] ;
+              rdfs:comment "The Mass Flow [kgH2/h] is the actual hydrogen flow, as measured at a certain time" ;
+              rdfs:label "Mass Flow Pipe" .
+
+
+###  https://w3id.org/h2v/property#MassFlowPointDevice
+:MassFlowPointDevice rdf:type owl:Class ;
+                     rdfs:subClassOf :DynamicProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                       owl:hasValue "unit:KiloGM-PER-HR"
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                       owl:hasValue "quantitykind:MassFlowRate"
+                                     ] ;
+                     rdfs:comment "The Mass Flow [kg/h] is the current hydrogen flow fed into the gas network" ;
+                     rdfs:label "Mass Flow Point Device" .
+
+
+###  https://w3id.org/h2v/property#MaximumAmountofStoredDistilledWater
+:MaximumAmountofStoredDistilledWater rdf:type owl:Class ;
+                                     rdfs:subClassOf :StaticProperty ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                       owl:hasValue "unit:KiloGM"
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                       owl:hasValue "quantitykind:Mass"
+                                                     ] ;
+                                     rdfs:comment "The Maximum Amount of Stored Distilled Water [kg] of the electrolyzer is the maximum quantity of distilled water that can be contained in water storage of the electrolyzer" ;
+                                     rdfs:label "Maximum Amount of Stored Distilled Water" .
+
+
+###  https://w3id.org/h2v/property#MaximumDepthofDischarge
+:MaximumDepthofDischarge rdf:type owl:Class ;
+                         rdfs:subClassOf :StaticProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:PERCENT"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:PressureRatio"
+                                         ] ;
+                         rdfs:comment "The Maximum Depth of Discharge [%] of the storage of the HV is the maximum percentage of discharge allowed by the storage (hydrogen storage allows discharging up to a certain pressure limit value to keep the system safe)" ;
+                         rdfs:label "Maximum Depth of Discharge" .
+
+
+###  https://w3id.org/h2v/property#MaximumHydrogenVolumePercentage
+:MaximumHydrogenVolumePercentage rdf:type owl:Class ;
+                                 rdfs:subClassOf :StaticProperty ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                   owl:hasValue "unit:PERCENT"
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                   owl:hasValue "quantitykind:DimensionlessRatio"
+                                                 ] ;
+                                 rdfs:comment "The Maximum Hydrogen Volume Percentage [%] is the maximum hydrogen percentage in volume acceptable by the gas network" ;
+                                 rdfs:label "Maximum Hydrogen Volume Percentage" .
+
+
+###  https://w3id.org/h2v/property#MaximumMassFlowPipe
+:MaximumMassFlowPipe rdf:type owl:Class ;
+                     rdfs:subClassOf :StaticProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                       owl:hasValue "unit:KiloGM-PER-HR"
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                       owl:hasValue "quantitykind:MassFlowRate"
+                                     ] ;
+                     rdfs:comment "The Maximum Mass Flow [kg/h] is the maximum transportable hydrogen flow" ;
+                     rdfs:label "Maximum Mass Flow Pipe" .
+
+
+###  https://w3id.org/h2v/property#MaximumMassFlowPointDevice
+:MaximumMassFlowPointDevice rdf:type owl:Class ;
+                            rdfs:subClassOf :StaticProperty ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                              owl:hasValue "unit:KiloGM-PER-HR"
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                              owl:hasValue "quantitykind:MassFlowRate"
+                                            ] ;
+                            rdfs:comment "The Maximum Mass Flow [kg/h] is the maximum acceptable hydrogen flow from the gas network" ;
+                            rdfs:label "Maximum Mass Flow Point Device" .
+
+
+###  https://w3id.org/h2v/property#MaximumStorageSize
+:MaximumStorageSize rdf:type owl:Class ;
+                    rdfs:subClassOf :StaticProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:KiloGM"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:Mass"
+                                    ] ;
+                    rdfs:comment "The Maximum Storage Size [kg] of the storage of the HV is the maximum nominal quantity of hydrogen that can be contained in storage" ;
+                    rdfs:label "Maximum Storage Size" .
+
+
+###  https://w3id.org/h2v/property#MaximumWaterFlowRate
+:MaximumWaterFlowRate rdf:type owl:Class ;
+                      rdfs:subClassOf :StaticProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                        owl:hasValue "unit:KiloGM-PER-HR"
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                        owl:hasValue "quantitykind:MassFlowRate"
+                                      ] ;
+                      rdfs:comment "The Maximum Water Flow Rate [kg/h] of the electrolyzer of the HV is the maximum flow rate of distilled water available" ;
+                      rdfs:label "Maximum Water Flow Rate" .
+
+
+###  https://w3id.org/h2v/property#N2Range
+:N2Range rdf:type owl:Class ;
+         rdfs:subClassOf :StaticProperty ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                           owl:hasValue "unit:PPM"
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                           owl:hasValue "quantitykind:DimensionlessRatio"
+                         ] ;
+         rdfs:comment "The N2 Range [ppm] of the electrolyzer of the HV is the range of nitrogen allowed in the mainstream to be exported to consumers downstream of the treatment systems" ;
+         rdfs:label "N2 Range" .
+
+
+###  https://w3id.org/h2v/property#NominalChemicalCompositionToleratedPipe
+:NominalChemicalCompositionToleratedPipe rdf:type owl:Class ;
+                                         rdfs:subClassOf :StaticProperty ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                           owl:hasValue "unit:PPM"
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                           owl:hasValue "quantitykind:DimensionlessRatio"
+                                                         ] ;
+                                         rdfs:comment "The Nominal Chemical Composition Tolerated [ppm] is the chemical composition of the gas acceptable in the pipe of the HV (Nominal O2, Nominal H2O, Nominal N2)" ;
+                                         rdfs:label "Nominal Chemical Composition Tolerated Pipe" .
+
+
+###  https://w3id.org/h2v/property#NominalChemicalCompositionToleratedPointDevice
+:NominalChemicalCompositionToleratedPointDevice rdf:type owl:Class ;
+                                                rdfs:subClassOf :StaticProperty ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                                  owl:hasValue "unit:PPM"
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                                  owl:hasValue "quantitykind:DimensionlessRatio"
+                                                                ] ;
+                                                rdfs:comment "The Nominal Chemical Composition Tolerated [ppm] is the allowable hydrogen chemical composition in parts per million of hydrogen fouling (O2, H2O, N2)" ;
+                                                rdfs:label "Nominal Chemical Composition Tolerated Point Device" .
+
+
+###  https://w3id.org/h2v/property#NominalGlobalEfficiency
+:NominalGlobalEfficiency rdf:type owl:Class ;
+                         rdfs:subClassOf :StaticProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:ONE-PER-ONE"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:Efficiency"
+                                         ] ;
+                         rdfs:comment "The Nominal Global Efficiency [-] of the PV system of the HV is the overall efficiency of an entire system, calculated under specified standard conditions, and expressed as a dimensionless ratio or percentage. It represents the system's rated performance in converting initial energy input into final useful output" ;
+                         rdfs:label "Nominal Global Efficiency" .
+
+
+###  https://w3id.org/h2v/property#NominalH2OToleratedPipe
+:NominalH2OToleratedPipe rdf:type owl:Class ;
+                         rdfs:subClassOf :StaticProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:PPM"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:DimensionlessRatio"
+                                         ] ;
+                         rdfs:comment "The Nominal H2O Tolerated [ppm] is the amount of water vapor acceptable in the hydrogen gas across the pipe of the HV" ;
+                         rdfs:label "Nominal H2O Tolerated Pipe" .
+
+
+###  https://w3id.org/h2v/property#NominalH2OToleratedPointDevice
+:NominalH2OToleratedPointDevice rdf:type owl:Class ;
+                                rdfs:subClassOf :StaticProperty ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                  owl:hasValue "unit:PPM"
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                  owl:hasValue "quantitykind:DimensionlessRatio"
+                                                ] ;
+                                rdfs:comment "The Nominal H2O Tolerated [ppm] is the maximum amount of water vapor tolerated in the hydrogen mixture to be fed into the gas network" ;
+                                rdfs:label "Nominal H2O Tolerated Point Device" .
+
+
+###  https://w3id.org/h2v/property#NominalModuleTemperature
+:NominalModuleTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :StaticProperty ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                            owl:hasValue "unit:DEG_C"
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                            owl:hasValue "quantitykind:Temperature"
+                                          ] ;
+                          rdfs:comment "The Nominal Module Temperature [°C] of the PV system of the HV is the nominal of module temperature related to global nominal efficiency" ;
+                          rdfs:label "Nominal Module Temperature" .
+
+
+###  https://w3id.org/h2v/property#NominalN2ToleratedPipe
+:NominalN2ToleratedPipe rdf:type owl:Class ;
+                        rdfs:subClassOf :StaticProperty ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                          owl:hasValue "unit:PPM"
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                          owl:hasValue "quantitykind:DimensionlessRatio"
+                                        ] ;
+                        rdfs:comment "The Nominal N2 Tolerated [ppm] is the amount of nitrogen acceptable in the hydrogen gas across the pipe of the HV" ;
+                        rdfs:label "Nominal N2 Tolerated Pipe" .
+
+
+###  https://w3id.org/h2v/property#NominalN2ToleratedPointDevice
+:NominalN2ToleratedPointDevice rdf:type owl:Class ;
+                               rdfs:subClassOf :StaticProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                 owl:hasValue "unit:PPM"
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                 owl:hasValue "quantitykind:DimensionlessRatio"
+                                               ] ;
+                               rdfs:comment "The Nominal N2 Tolerated [ppm] is the maximum amount of nitrogen tolerated in the hydrogen mixture to be fed into the gas network" ;
+                               rdfs:label "Nominal N2 Tolerated Point Device" .
+
+
+###  https://w3id.org/h2v/property#NominalO2ToleratedPipe
+:NominalO2ToleratedPipe rdf:type owl:Class ;
+                        rdfs:subClassOf :StaticProperty ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                          owl:hasValue "unit:PPM"
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                          owl:hasValue "quantitykind:DimensionlessRatio"
+                                        ] ;
+                        rdfs:comment "The Nominal O2 Tolerated [ppm] is the amount of oxigen acceptable in the hydrogen gas across the pipe of the HV" ;
+                        rdfs:label "Nominal O2 Tolerated Pipe" .
+
+
+###  https://w3id.org/h2v/property#NominalO2ToleratedPointDevice
+:NominalO2ToleratedPointDevice rdf:type owl:Class ;
+                               rdfs:subClassOf :StaticProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                                 owl:hasValue "unit:PPM"
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                                 owl:hasValue "quantitykind:DimensionlessRatio"
+                                               ] ;
+                               rdfs:comment "The Nominal O2 Tolerated [ppm] is the maximum amount of oxigen tolerated in the hydrogen mixture to be fed into the gas network" ;
+                               rdfs:label "Nominal O2 Tolerated Point Device" .
+
+
+###  https://w3id.org/h2v/property#NominalPower
+:NominalPower rdf:type owl:Class ;
+              rdfs:subClassOf :StaticProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                owl:hasValue "unit:KiloW"
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                owl:hasValue "quantitykind:ElectricPower"
+                              ] ;
+              rdfs:comment "The Nominal Power [kW] of the PV system of the HV is the nominal power production" ;
+              rdfs:label "Nominal Power" .
+
+
+###  https://w3id.org/h2v/property#NominalStorageLeakage
+:NominalStorageLeakage rdf:type owl:Class ;
+                       rdfs:subClassOf :StaticProperty ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                         owl:hasValue "unit:PERCENT"
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                         owl:hasValue "quantitykind:Ratio"
+                                       ] ;
+                       rdfs:comment "The Nominal Storage Leakage [%kg loss/day] of the storage of the HV is the daily hydrogen leakage through leakage and valves" ;
+                       rdfs:label "Nominal Storage Leakage" .
+
+
+###  https://w3id.org/h2v/property#O2Range
+:O2Range rdf:type owl:Class ;
+         rdfs:subClassOf :StaticProperty ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                           owl:hasValue "unit:PPM"
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                           owl:hasValue "quantitykind:DimensionlessRatio"
+                         ] ;
+         rdfs:comment "The O2 Range [ppm] of the electrolyzer of the HV is the range of oxygen allowed in the mainstream to be exported to consumers downstream of the treatment systems" ;
+         rdfs:label "O2 Range" .
+
+
+###  https://w3id.org/h2v/property#OutputH2Pressure
+:OutputH2Pressure rdf:type owl:Class ;
+                  rdfs:subClassOf :DynamicProperty ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                    owl:hasValue "unit:BAR"
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                    owl:hasValue "quantitykind:Pressure"
+                                  ] ;
+                  rdfs:comment "The Output H2 Pressure [bar] of the electrolyzer of the HV is the measured H2 pressure to be compared with the allowed range" ;
+                  rdfs:label "Output H2 Pressure" .
+
+
+###  https://w3id.org/h2v/property#OutputH2Temperature
+:OutputH2Temperature rdf:type owl:Class ;
+                     rdfs:subClassOf :DynamicProperty ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                       owl:hasValue "unit:DEG_C"
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                       owl:hasValue "quantitykind:Temperature"
+                                     ] ;
+                     rdfs:comment "The Output H2 Temperature [°C] of the electrolyzer of the HV is the measured H2 temperature to be compared with the allowed range" ;
+                     rdfs:label "Output H2 Temperature" .
+
+
+###  https://w3id.org/h2v/property#OutputMassFlow
+:OutputMassFlow rdf:type owl:Class ;
+                rdfs:subClassOf :DynamicProperty ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                  owl:hasValue "unit:KiloGM-PER-HR"
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                  owl:hasValue "quantitykind:MassFlowRate"
+                                ] ;
+                rdfs:comment "The Output Mass Flow [kg/h] of the storage of the HV is the hydrogen flow output at storage" ;
+                rdfs:label "Output Mass Flow" .
+
+
+###  https://w3id.org/h2v/property#PressureH2Pipe
+:PressureH2Pipe rdf:type owl:Class ;
+                rdfs:subClassOf :DynamicProperty ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                  owl:hasValue "unit:BAR"
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                  owl:hasValue "quantitykind:Pressure"
+                                ] ;
+                rdfs:comment "The Pressure [bar] is the actual pressure of hydrogen, as measured at a certain time" ;
+                rdfs:label "Pressure H2 Pipe" .
+
+
+###  https://w3id.org/h2v/property#PressureH2PointDevice
+:PressureH2PointDevice rdf:type owl:Class ;
+                       rdfs:subClassOf :DynamicProperty ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                         owl:hasValue "unit:BAR"
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                         owl:hasValue "quantitykind:Pressure"
+                                       ] ;
+                       rdfs:comment "The Pressure H2 [bar] is the current hydrogen pressure fed into the gas network" ;
+                       rdfs:label "Pressure H2 Point Device" .
+
+
+###  https://w3id.org/h2v/property#PressureRange
+:PressureRange rdf:type owl:Class ;
+               rdfs:subClassOf :StaticProperty ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                 owl:hasValue "unit:BAR"
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                 owl:hasValue "quantitykind:Pressure"
+                               ] ;
+               rdfs:comment "The Pressure Range [bar] is the maximum and minimum pressure of transportable hydrogen" ;
+               rdfs:label "Pressure Range" .
+
+
+###  https://w3id.org/h2v/property#RatioH2
+:RatioH2 rdf:type owl:Class ;
+         rdfs:subClassOf :DynamicProperty ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                           owl:hasValue "unit:ONE-PER-ONE"
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                           owl:hasValue "quantitykind:VolumeFlowRatio"
+                         ] ;
+         rdfs:comment "The Ratio H2 [kg H2/kg water] of the electrolyzer of the HV is the hydrogen production relative to the consumption of distilled water" ;
+         rdfs:label "Ratio H2" .
+
+
+###  https://w3id.org/h2v/property#StateOfCharge
+:StateOfCharge rdf:type owl:Class ;
+               rdfs:subClassOf :DynamicProperty ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                 owl:hasValue "unit:PERCENT"
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                 owl:hasValue "quantitykind:DimensionlessRatio"
+                               ] ;
+               rdfs:comment "The State Of Charge  [%] of the Storage of the HV is the ratio between the amount of hydrogen stored at a certain time and the maximum amount of hydrogen allowed in storage" ;
+               rdfs:label "State Of Charge" .
+
+
+###  https://w3id.org/h2v/property#StaticProperty
+:StaticProperty rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v/property#StoragePressure
+:StoragePressure rdf:type owl:Class ;
+                 rdfs:subClassOf :DynamicProperty ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                   owl:hasValue "unit:BAR"
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                   owl:hasValue "quantitykind:Pressure"
+                                 ] ;
+                 rdfs:comment "The Storage Pressure [bar] of the storage of the HV is the hydrogen pressure inside the storage unit" ;
+                 rdfs:label "Storage Pressure" .
+
+
+###  https://w3id.org/h2v/property#StoragePressureRange
+:StoragePressureRange rdf:type owl:Class ;
+                      rdfs:subClassOf :StaticProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                        owl:hasValue "unit:BAR"
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                        owl:hasValue "quantitykind:Pressure"
+                                      ] ;
+                      rdfs:comment "The Storage Pressure Range [bar] of the storage of the HV is the minimum and maximum permissible hydrogen pressure inside the storage unit" ;
+                      rdfs:label "Storage Pressure Range" .
+
+
+###  https://w3id.org/h2v/property#StorageTemperature
+:StorageTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf :DynamicProperty ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                      owl:hasValue "unit:DEG_C"
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                      owl:hasValue "quantitykind:Temperature"
+                                    ] ;
+                    rdfs:comment "The Storage Temperature [°C] of the storage of the HV is the hydrogen temperature inside the storage unit" ;
+                    rdfs:label "Storage Temperature" .
+
+
+###  https://w3id.org/h2v/property#StorageTemperatureRange
+:StorageTemperatureRange rdf:type owl:Class ;
+                         rdfs:subClassOf :StaticProperty ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                           owl:hasValue "unit:DEG_C"
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                           owl:hasValue "quantitykind:Temperature"
+                                         ] ;
+                         rdfs:comment "The Storage Temperature Range [°C] of the storage of the HV is the minimum and maximum permissible hydrogen temperature inside the storage unit" ;
+                         rdfs:label "Storage Temperature Range" .
+
+
+###  https://w3id.org/h2v/property#SystemArea
+:SystemArea rdf:type owl:Class ;
+            rdfs:subClassOf :StaticProperty ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                              owl:hasValue "unit:M2"
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                              owl:hasValue "quantitykind:Area"
+                            ] ;
+            rdfs:comment "The System Area [m2] of the PV system of the HV is the useful surface for PV panels" ;
+            rdfs:label "System Area" .
+
+
+###  https://w3id.org/h2v/property#SystemSpecificEnergy
+:SystemSpecificEnergy rdf:type owl:Class ;
+                      rdfs:subClassOf :DynamicProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                        owl:hasValue "unit:MegaJ-PER-KiloGM"
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                        owl:hasValue "quantitykind:SpecificEnergy"
+                                      ] ;
+                      rdfs:comment "The System Specific Energy [MJ/kg] of the electrolyzer of the HV is the electric energy consumed for each kg of H2 produced, which depends on the operating conditions and the state of the components" ;
+                      rdfs:label "System Specific Energy" .
+
+
+###  https://w3id.org/h2v/property#WaterConductivityRange
+:WaterConductivityRange rdf:type owl:Class ;
+                        rdfs:subClassOf :StaticProperty ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                          owl:hasValue "unit:MicroS-PER-CentiM"
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                          owl:hasValue "quantitykind:ElectrolyticConductivity"
+                                        ] ;
+                        rdfs:comment "The Water Conductivity Range [µS/cm] of the electrolyzer of the HV is the  measure of the dissolved salts in water and the acceptable range for an electrolyzer. Conductivity measures the ability of water to conduct electricity, which depends on the presence of dissolved ions. High conductivity indicates the presence of ionic impurities, which can affect the efficiency of the electrolyzer and cause corrosion or other operational issues" ;
+                        rdfs:label "Water Conductivity Range" .
+
+
+###  https://w3id.org/h2v/property#WaterFlow
+:WaterFlow rdf:type owl:Class ;
+           rdfs:subClassOf :DynamicProperty ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                             owl:hasValue "unit:KiloGM-PER-HR"
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                             owl:hasValue "quantitykind:MassFlowRate"
+                           ] ;
+           rdfs:comment "The Water Flow [kg/h] of the electrolyzer of the HV is the actual distilled water consumption" ;
+           rdfs:label "Water Flow" .
+
+
+###  https://w3id.org/h2v/property#WaterPHRange
+:WaterPHRange rdf:type owl:Class ;
+              rdfs:subClassOf :StaticProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                owl:hasValue "unit:PH"
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                owl:hasValue "quantitykind:Acidity "
+                              ] ;
+              rdfs:comment "The Water PH Range [-] of the electrolyzer of the HV is the measure of the acidity or basicity of distilled water. The pH can affect the solubility of various compounds and the formation of scale" ;
+              rdfs:label "Water PH Range" .
+
+
+###  https://w3id.org/h2v/property#WeatherProperty
+:WeatherProperty rdf:type owl:Class .
+
+
+###  https://w3id.org/h2v/property#WobbeIndex
+:WobbeIndex rdf:type owl:Class ;
+            rdfs:subClassOf :DynamicProperty ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                              owl:hasValue "unit:MegaJ-PER-M3"
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                              owl:hasValue "quantitykind:EnergyDensity"
+                            ] ;
+            rdfs:comment "The Wobbe Index [MJ/m^3] is the current Wobbe index on the gas network" ;
+            rdfs:label "Wobbe Index" .
+
+
+###  https://w3id.org/h2v/property#WobbeIndexRange
+:WobbeIndexRange rdf:type owl:Class ;
+                 rdfs:subClassOf :StaticProperty ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://qudt.org/schema/qudt/applicableUnit> ;
+                                   owl:hasValue "unit:MegaJ-PER-M3"
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://qudt.org/schema/qudt/hasQuantityKind> ;
+                                   owl:hasValue "quantitykind:EnergyDensity"
+                                 ] ;
+                 rdfs:comment "The Wobbe Index Range [MJ/m^3] is the ratio of HHV to the square root of the relative density of the fuel with respect to air. It gives information on the compatibility of a fuel with the gas network" ;
+                 rdfs:label "Wobbe Index Range" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

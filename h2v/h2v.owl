@@ -1,0 +1,337 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix h2v: <https://w3id.org/h2v#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:contributor a owl:AnnotationProperty .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:DatatypeProperty ;
+    rdfs:label "title" .
+
+bibo:status a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit" .
+
+qudt:hasUnit a owl:ObjectProperty ;
+    rdfs:label "has unit" .
+
+qudt:numericValue a owl:DatatypeProperty ;
+    rdfs:label "numeric value" .
+
+schema1:maxValue a owl:DatatypeProperty ;
+    rdfs:label "max value" .
+
+schema1:minValue a owl:DatatypeProperty ;
+    rdfs:label "min value" .
+
+gsp:Geometry a owl:Class ;
+    rdfs:label "Geometry" .
+
+gsp:hasGeometry a owl:ObjectProperty ;
+    rdfs:label "has geometry" .
+
+rdfs:label a owl:AnnotationProperty .
+
+owl:versionIRI a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+prov:atTime a owl:DatatypeProperty ;
+    rdfs:label "at time" .
+
+sosa:Observation a owl:Class ;
+    rdfs:label "Observation" .
+
+sosa:hasFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:label "has feature of interest" .
+
+sosa:hasResult a owl:ObjectProperty ;
+    rdfs:label "has result" .
+
+sosa:observedProperty a owl:ObjectProperty ;
+    rdfs:label "observed property" .
+
+sosa:resultTime a owl:DatatypeProperty ;
+    rdfs:label "result time" .
+
+ssn:hasProperty a owl:ObjectProperty ;
+    rdfs:label "has property" .
+
+ssn:hasSubSystem a owl:ObjectProperty ;
+    rdfs:label "has sub system" .
+
+<https://w3id.org/h2v> a owl:Ontology ;
+    rdfs:label "Hydrogen Valley Ontology (H2V)" ;
+    dc:contributor "Claudio Sesto (RSE)",
+        "Francesca Soldan (RSE)",
+        "Ilaria Baroni (Cefriel)",
+        "Irene Celino (Cefriel)" ;
+    dc:creator "Gloria Re Calegari (Cefriel)",
+        "Valentina Carriero (Cefriel)" ;
+    dc:title "Hydrogen Valley Ontology (H2V)" ;
+    dcterms:description "The Hydrogen Valley Ontology (H2V) models the Hydrogen Valley domain, with all its components and properties, and related activities." ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:publisher <https://ror.org/046bfkz44> ;
+    bibo:status "Published"@en ;
+    vann:preferredNamespacePrefix "h2v" ;
+    vann:preferredNamespaceUri "https://w3id.org/h2v#" ;
+    owl:versionIRI <https://w3id.org/h2v/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+h2v:ElectricityProductionArea a owl:Class ;
+    rdfs:label "Electricity Production Area" ;
+    rdfs:comment "An Electricity Production Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)."^^xsd:string ;
+    rdfs:subClassOf h2v:HydrogenValleyArea .
+
+h2v:Electrolyzer a owl:Class ;
+    rdfs:label "Electrolyzer" ;
+    rdfs:comment "An Electrolyzer is a system that uses electrical energy to split water into hydrogen and oxygen."^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:HydrogenConsumer a owl:Class ;
+    rdfs:label "Hydrogen Consumer" ;
+    rdfs:comment "A Hydrogen Consumer is a system that uses hydrogen for various purposes, such as industry, transportation, or energy production. "^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:HydrogenConsumptionArea a owl:Class ;
+    rdfs:label "Hydrogen Consumption Area" ;
+    rdfs:comment "A Hydrogen Consumption Area is the geographical polygon where the hydrogen consumer is located (given by a list of coordinates)."^^xsd:string ;
+    rdfs:subClassOf h2v:HydrogenValleyArea .
+
+h2v:HydrogenProductionArea a owl:Class ;
+    rdfs:label "Hydrogen Production Area" ;
+    rdfs:comment "A Hydrogen Production Area is the geographical polygon where the electrolyzer is located (given by a list of coordinates)."^^xsd:string ;
+    rdfs:subClassOf h2v:HydrogenValleyArea .
+
+h2v:HydrogenStorage a owl:Class ;
+    rdfs:label "Hydrogen Storage" ;
+    rdfs:comment "A Hydrogen Storage is the system for storing the produced hydrogen, which can be stored in compressed gaseous form, as a liquid, or through other methods. Hydrogen storage is essential to ensure system flexibility and to balance energy production and demand. TheHydrogen Storage is the interface for import/export operations."^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:HydrogenStorageArea a owl:Class ;
+    rdfs:label "Hydrogen Storage Area" ;
+    rdfs:comment "A Hydrogen Storage Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)."^^xsd:string ;
+    rdfs:subClassOf h2v:HydrogenValleyArea .
+
+h2v:HydrogenValley a owl:Class ;
+    rdfs:label "Hydrogen Valley" ;
+    rdfs:comment "A Hydrogen Valley (HV) is a geographic area—such as a city, region, island, or industrial cluster—where various hydrogen applications are combined into an integrated hydrogen ecosystem that consumes a significant amount of hydrogen. An Hydrogen Valley can therefore encompass the entire hydrogen value chain: production, storage, distribution, and end use."^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:HydrogenValleyComponent a owl:Class ;
+    rdfs:label "Hydrogen Valley Component" ;
+    rdfs:comment "A Hydrogen Valley Component is a System within a Hydrogen Valley that contributes to the hydrogen value chain, such as hydrogen production. "^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:PhotovoltaicSystem a owl:Class ;
+    rdfs:label "Photovoltaic System" ;
+    rdfs:comment "A Photovoltaic System is a complete electrical system that generates electricity from sunlight using solar panels. It comprises various components, including solar panels, inverters, and potentially batteries."^^xsd:string ;
+    rdfs:seeAlso "https://cim.fein-aachen.org/libcimpp/doc/IEC61970_17v23/classIEC61970_1_1Base_1_1Generation_1_1Production_1_1PhotoVoltaicUnit.html"^^xsd:string ;
+    rdfs:subClassOf h2v:RESPlant .
+
+h2v:Pipe a owl:Class ;
+    rdfs:label "Pipe" ;
+    rdfs:comment "A Hydrogen Pipe is the system used to transport hydrogen gas across the different systems of a HV."^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:PointDevice a owl:Class ;
+    rdfs:label "Point Device" ;
+    rdfs:comment "A Point Device is the transfer point of the HV with the gas network."^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:WeatherProperty a owl:Class ;
+    rdfs:label "Weather Property" ;
+    rdfs:comment "A Weather Property is a specific type of Dynamic Property related to the weather."^^xsd:string ;
+    rdfs:subClassOf h2v:DynamicProperty .
+
+h2v:allocatedBy a owl:ObjectProperty ;
+    rdfs:label "allocated by" ;
+    rdfs:comment "This property links an Hydrogen Allocation to the System that is allocating hydrogen to another system."^^xsd:string ;
+    rdfs:domain h2v:HydrogenAllocation ;
+    rdfs:range ssn:System .
+
+h2v:allocatedTo a owl:ObjectProperty ;
+    rdfs:label "allocated to" ;
+    rdfs:comment "This property links an Hydrogen Allocation to the System that is receiving hydrogen from another system. "^^xsd:string ;
+    rdfs:domain h2v:HydrogenAllocation ;
+    rdfs:range ssn:System .
+
+h2v:forecastedForTime a owl:DatatypeProperty ;
+    rdfs:label "forecasted for time" ;
+    rdfs:comment "This property links a Forecast to the time in the future that the Forecast refers to."^^xsd:string ;
+    rdfs:domain h2v:Forecast ;
+    rdfs:range xsd:dateTime .
+
+h2v:forecastsProperty a owl:ObjectProperty ;
+    rdfs:label "forecasts property" ;
+    rdfs:comment "This property links a Forecast to the Dynamic Property the forecast is about."^^xsd:string ;
+    rdfs:domain h2v:Forecast ;
+    rdfs:range h2v:DynamicProperty .
+
+h2v:hasAllocatedValue a owl:ObjectProperty ;
+    rdfs:label "has allocated value" ;
+    rdfs:comment "nan"^^xsd:string ;
+    rdfs:domain h2v:HydrogenAllocation ;
+    rdfs:range qudt:QuantityValue .
+
+h2v:hasDynamicProperty a owl:ObjectProperty ;
+    rdfs:label "has dynamic property" ;
+    rdfs:comment "This property links a System to a Dynamic Property of the System."^^xsd:string ;
+    rdfs:domain ssn:System ;
+    rdfs:range h2v:DynamicProperty .
+
+h2v:hasExporter a owl:ObjectProperty ;
+    rdfs:label "has exporter" ;
+    rdfs:comment "This property links an Hydrogen Import Export activity to the System that is exporting to another system."^^xsd:string ;
+    rdfs:domain h2v:HydrogenImportExport ;
+    rdfs:range ssn:System .
+
+h2v:hasForecastedValue a owl:ObjectProperty ;
+    rdfs:label "has forecasted value" ;
+    rdfs:comment "This property links a Forecast to the Quantity Value of the Dynamic Property that the forecast is about."^^xsd:string ;
+    rdfs:domain h2v:Forecast ;
+    rdfs:range qudt:QuantityValue .
+
+h2v:hasImportedExportedValue a owl:ObjectProperty ;
+    rdfs:label "has imported exported value" ;
+    rdfs:comment "This property links an Hydrogen Import Export activity to the amount of hydrogen that is being imported/exported."^^xsd:string ;
+    rdfs:domain h2v:HydrogenImportExport ;
+    rdfs:range qudt:QuantityValue .
+
+h2v:hasImporter a owl:ObjectProperty ;
+    rdfs:label "has importer" ;
+    rdfs:comment "This property links an Hydrogen Import Export activity to the System that is importing from another system."^^xsd:string ;
+    rdfs:domain h2v:HydrogenImportExport ;
+    rdfs:range ssn:System .
+
+h2v:hasStaticProperty a owl:ObjectProperty ;
+    rdfs:label "has static property" ;
+    rdfs:comment "This property links a System to a Static Property of the System."^^xsd:string ;
+    rdfs:domain ssn:System ;
+    rdfs:range h2v:StaticProperty .
+
+h2v:hasStaticValue a owl:ObjectProperty ;
+    rdfs:label "has static value" ;
+    rdfs:comment "This property links a Static Property to its static Quantity Value."^^xsd:string ;
+    rdfs:domain h2v:StaticProperty ;
+    rdfs:range qudt:QuantityValue .
+
+h2v:isDynamicPropertyOf a owl:ObjectProperty ;
+    rdfs:label "is dynamic property of" ;
+    rdfs:comment "This property links a Dynamic Property to the System it refers to."^^xsd:string ;
+    rdfs:domain h2v:DynamicProperty ;
+    rdfs:range ssn:System .
+
+h2v:isStaticPropertyOf a owl:ObjectProperty ;
+    rdfs:label "is static property of" ;
+    rdfs:comment "This property links a Static Property to the System it refers to."^^xsd:string ;
+    rdfs:domain h2v:StaticProperty ;
+    rdfs:range ssn:System .
+
+h2v:isStaticValueOf a owl:ObjectProperty ;
+    rdfs:label "is static value of" ;
+    rdfs:comment "This property links a static Quantity Value to the Static Property it refers to."^^xsd:string ;
+    rdfs:domain qudt:QuantityValue ;
+    rdfs:range h2v:StaticProperty .
+
+h2v:issuedAtTime a owl:DatatypeProperty ;
+    rdfs:label "issued at time" ;
+    rdfs:comment "This property link a Forecast to the time when a Forecast has been issued."^^xsd:string ;
+    rdfs:domain h2v:Forecast ;
+    rdfs:range xsd:dateTime .
+
+h2v:refersToFeature a owl:ObjectProperty ;
+    rdfs:label "refers to feature" ;
+    rdfs:comment "This property links a Weather Forecast to the geographical Feature to which the forecast applies."^^xsd:string ;
+    rdfs:domain h2v:WeatherForecast ;
+    rdfs:range gsp:Feature .
+
+gsp:Feature a owl:Class ;
+    rdfs:label "Feature" .
+
+sosa:ObservableProperty a owl:Class ;
+    rdfs:label "Observable Property" .
+
+ssn:Property a owl:Class ;
+    rdfs:label "Property" .
+
+h2v:RESPlant a owl:Class ;
+    rdfs:label "R E S Plant" ;
+    rdfs:comment "A RES Plant is renewable energy system that powers the electrolyzer. This can be a photovoltaic, wind, hydroelectric, or geothermal plant. Its capacity and production profile directly affect the amount of green hydrogen that can be generated."^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:WeatherForecast a owl:Class ;
+    rdfs:label "Weather Forecast" ;
+    rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some weather property, based on models, data, or prior observations."^^xsd:string ;
+    rdfs:subClassOf h2v:Forecast .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity" .
+
+h2v:HydrogenAllocation a owl:Class ;
+    rdfs:label "Hydrogen Allocation" ;
+    rdfs:comment "An Hydrogen Allocation is an activity in which an amount of hydrogen is allocated by a System, usually an Hydrogen Valley, to another System (e.g., an Hydrogen Consumer)."^^xsd:string ;
+    rdfs:subClassOf prov:Activity .
+
+h2v:HydrogenImportExport a owl:Class ;
+    rdfs:label "Hydrogen Import Export" ;
+    rdfs:comment "An Hydrogen Import Export is an activity in which an amount of hydrogen is exchanged between two systems, that is, an hydrogen importer and an hydrogen exporter."^^xsd:string ;
+    rdfs:subClassOf prov:Activity .
+
+h2v:DynamicProperty a owl:Class ;
+    rdfs:label "Dynamic Property" ;
+    rdfs:comment "A Dynamic Property is a time-varying Property of a System that is dynamically observed or measured."^^xsd:string ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+h2v:HydrogenValleyArea a owl:Class ;
+    rdfs:label "Hydrogen Valley Area" ;
+    rdfs:comment "A Hydrogen Valley Area is a System within a Hydrogen Valley that corresponds to a zone where specific hydrogen-related activities, like hydrogen storage or consumption, take place. An HydrogenValleyArea has at least one SubSystem. "^^xsd:string ;
+    rdfs:subClassOf ssn:System .
+
+h2v:StaticProperty a owl:Class ;
+    rdfs:label "Static Property" ;
+    rdfs:comment "A Static Property is a nominal Property of a System, typically defined by design or manufacturer specifications, that is not meant to be dynamically observed"^^xsd:string ;
+    rdfs:subClassOf ssn:Property .
+
+qudt:QuantityValue a owl:Class ;
+    rdfs:label "Quantity Value" .
+
+h2v:Forecast a owl:Class ;
+    rdfs:label "Forecast" ;
+    rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some property, based on models, data, or prior observations."^^xsd:string ;
+    rdfs:subClassOf prov:Activity .
+
+ssn:System a owl:Class ;
+    rdfs:label "System" .
+
+

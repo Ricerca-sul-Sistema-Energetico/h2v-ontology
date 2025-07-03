@@ -1,0 +1,1579 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix h2v: <https://w3id.org/h2v#> .
+@prefix h2v-prop: <https://w3id.org/h2v/property#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+h2v-prop: a owl:Ontology ;
+    rdfs:label "Hydrogen Valley Ontology (H2V) - Property module" ;
+    dc:contributor "Claudio Sesto (RSE)",
+        "Francesca Soldan (RSE)",
+        "Ilaria Baroni (Cefriel)",
+        "Irene Celino (Cefriel)" ;
+    dc:creator "Gloria Re Calegari (Cefriel)",
+        "Valentina Carriero (Cefriel)" ;
+    dc:title "Hydrogen Valley Ontology (H2V) - Property module" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:publisher "Cefriel" ;
+    bibo:status "Published"@en ;
+    owl:versionIRI <https://w3id.org/h2v/1.0.0> ;
+    owl:versionInfo "1.0.0" .
+
+h2v-prop:EnvironmentalTemperature a owl:Class ;
+    rdfs:label "Environmental Temperature"^^xsd:string ;
+    rdfs:comment "The Environmental Temperature [°C] is the ambient air temperatures, in degrees Celsius. It can be either actual (i.e., based on an observation) or forecasted."^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:WeatherProperty .
+
+h2v-prop:EnvironmentalWindSpeed a owl:Class ;
+    rdfs:label "Environmental Wind Speed"^^xsd:string ;
+    rdfs:comment "The Environmental Wind Speed [m/s] is the wind speed, in meter per second. It can be either actual (i.e., based on an observation) or forecasted."^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:M-PER-SEC" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Speed" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:WeatherProperty .
+
+h2v-prop:GlobalHorizontalIrradiance a owl:Class ;
+    rdfs:label "Global Horizontal Irradiance"^^xsd:string ;
+    rdfs:comment "The Global Horizontal Irradiance [W/m2] is the usable solar energy expected to hit a specific surface (per square meter) over a certain time period, after accounting for various real-world loss factors. It can be either actual (i.e., based on an observation) or forecasted."^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:W-PER-M2" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:PowerPerArea" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:WeatherProperty .
+
+h2v-prop:hasActualGlobalEfficiency a owl:ObjectProperty ;
+    rdfs:label "has actual global efficiency"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ActualGlobalEfficiency .
+
+h2v-prop:hasActualH2OPipe a owl:ObjectProperty ;
+    rdfs:label "has actual h2o pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:ActualH2OPipe .
+
+h2v-prop:hasActualH2OPointDevice a owl:ObjectProperty ;
+    rdfs:label "has actual h2o point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:ActualH2OPointDevice .
+
+h2v-prop:hasActualModuleTemperature a owl:ObjectProperty ;
+    rdfs:label "has actual module temperature"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ActualModuleTemperature .
+
+h2v-prop:hasActualN2Pipe a owl:ObjectProperty ;
+    rdfs:label "has actual n2 pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:ActualN2Pipe .
+
+h2v-prop:hasActualN2PointDevice a owl:ObjectProperty ;
+    rdfs:label "has actual n2 point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:ActualN2PointDevice .
+
+h2v-prop:hasActualO2Pipe a owl:ObjectProperty ;
+    rdfs:label "has actual o2 pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:ActualO2Pipe .
+
+h2v-prop:hasActualO2PointDevice a owl:ObjectProperty ;
+    rdfs:label "has actual o2 point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:ActualO2PointDevice .
+
+h2v-prop:hasActualPlaneOfArrayIrradiancePOA a owl:ObjectProperty ;
+    rdfs:label "has actual plane of array irradiance poa"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ActualPlaneOfArrayIrradiancePOA .
+
+h2v-prop:hasActualPowerProduction a owl:ObjectProperty ;
+    rdfs:label "has actual power production"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ActualPowerProduction .
+
+h2v-prop:hasActualStorageSizeMax a owl:ObjectProperty ;
+    rdfs:label "has actual storage size max"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:ActualStorageSizeMax .
+
+h2v-prop:hasAmountOfHydrogenStored a owl:ObjectProperty ;
+    rdfs:label "has amount of hydrogen stored"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:AmountOfHydrogenStored .
+
+h2v-prop:hasAmountOfStoredDistilledWater a owl:ObjectProperty ;
+    rdfs:label "has amount of stored distilled water"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:AmountOfStoredDistilledWater .
+
+h2v-prop:hasChemicalCompositionPipe a owl:ObjectProperty ;
+    rdfs:label "has chemical composition pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:ChemicalCompositionPipe .
+
+h2v-prop:hasChemicalCompositionPointDevice a owl:ObjectProperty ;
+    rdfs:label "has chemical composition point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:ChemicalCompositionPointDevice .
+
+h2v-prop:hasCurrentHydrogenExported a owl:ObjectProperty ;
+    rdfs:label "has current hydrogen exported"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:CurrentHydrogenExported .
+
+h2v-prop:hasCurrentHydrogenImported a owl:ObjectProperty ;
+    rdfs:label "has current hydrogen imported"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:CurrentHydrogenImported .
+
+h2v-prop:hasDistilledWaterTemperature a owl:ObjectProperty ;
+    rdfs:label "has distilled water temperature"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:DistilledWaterTemperature .
+
+h2v-prop:hasDistilledWaterTemperatureRange a owl:ObjectProperty ;
+    rdfs:label "has distilled water temperature range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:DistilledWaterTemperatureRange .
+
+h2v-prop:hasElectricPower a owl:ObjectProperty ;
+    rdfs:label "has electric power"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:ElectricPower .
+
+h2v-prop:hasElectricPowerRange a owl:ObjectProperty ;
+    rdfs:label "has electric power range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:ElectricPowerRange .
+
+h2v-prop:hasEnvironmentalTemperatureRange a owl:ObjectProperty ;
+    rdfs:label "has environmental temperature range"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:EnvironmentalTemperatureRange .
+
+h2v-prop:hasEnvironmentalWindSpeedRange a owl:ObjectProperty ;
+    rdfs:label "has environmental wind speed range"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:EnvironmentalWindSpeedRange .
+
+h2v-prop:hasExportedHydrogenFlowPressure a owl:ObjectProperty ;
+    rdfs:label "has exported hydrogen flow pressure"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:ExportedHydrogenFlowPressure .
+
+h2v-prop:hasExportedHydrogenPressureRange a owl:ObjectProperty ;
+    rdfs:label "has exported hydrogen pressure range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:ExportedHydrogenPressureRange .
+
+h2v-prop:hasForecastedGlobalEfficiency a owl:ObjectProperty ;
+    rdfs:label "has forecasted global efficiency"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ForecastedGlobalEfficiency .
+
+h2v-prop:hasForecastedModuleTemperature a owl:ObjectProperty ;
+    rdfs:label "has forecasted module temperature"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ForecastedModuleTemperature .
+
+h2v-prop:hasForecastedPlaneOfArrayIrradiancePOA a owl:ObjectProperty ;
+    rdfs:label "has forecasted plane of array irradiance poa"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ForecastedPlaneOfArrayIrradiancePOA .
+
+h2v-prop:hasForecastedPowerProduction a owl:ObjectProperty ;
+    rdfs:label "has forecasted power production"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:ForecastedPowerProduction .
+
+h2v-prop:hasGasCompositionRange a owl:ObjectProperty ;
+    rdfs:label "has gas composition range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:GasCompositionRange .
+
+h2v-prop:hasH2ORange a owl:ObjectProperty ;
+    rdfs:label "has h2o range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:H2ORange .
+
+h2v-prop:hasH2PressureRangeElectrolyzer a owl:ObjectProperty ;
+    rdfs:label "has h2 pressure range electrolyzer"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:H2PressureRangeElectrolyzer .
+
+h2v-prop:hasH2PressureRangePointDevice a owl:ObjectProperty ;
+    rdfs:label "has h2 pressure range point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:H2PressureRangePointDevice .
+
+h2v-prop:hasH2ProductionRange a owl:ObjectProperty ;
+    rdfs:label "has h2 production range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:H2ProductionRange .
+
+h2v-prop:hasH2TemperatureRange a owl:ObjectProperty ;
+    rdfs:label "has h2 temperature range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:H2TemperatureRange .
+
+h2v-prop:hasHHV a owl:ObjectProperty ;
+    rdfs:label "has hhv"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:HHV .
+
+h2v-prop:hasHHVRangeH2 a owl:ObjectProperty ;
+    rdfs:label "has hhv range h2"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:HHVRangeH2 .
+
+h2v-prop:hasHydrogenAllocated a owl:ObjectProperty ;
+    rdfs:label "has hydrogen allocated"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:HydrogenAllocated .
+
+h2v-prop:hasHydrogenFlowDemand a owl:ObjectProperty ;
+    rdfs:label "has hydrogen flow demand"^^xsd:string ;
+    rdfs:domain h2v:HydrogenConsumer ;
+    rdfs:range h2v-prop:HydrogenFlowDemand .
+
+h2v-prop:hasHydrogenFlowDemandRange a owl:ObjectProperty ;
+    rdfs:label "has hydrogen flow demand range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenConsumer ;
+    rdfs:range h2v-prop:HydrogenFlowDemandRange .
+
+h2v-prop:hasHydrogenMassFlow a owl:ObjectProperty ;
+    rdfs:label "has hydrogen mass flow"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:HydrogenMassFlow .
+
+h2v-prop:hasHydrogenMassFlowInjectable a owl:ObjectProperty ;
+    rdfs:label "has hydrogen mass flow injectable"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:HydrogenMassFlowInjectable .
+
+h2v-prop:hasHydrogenPercentage a owl:ObjectProperty ;
+    rdfs:label "has hydrogen percentage "^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:HydrogenPercentage .
+
+h2v-prop:hasHydrogenPressureRange a owl:ObjectProperty ;
+    rdfs:label "has hydrogen pressure range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenConsumer ;
+    rdfs:range h2v-prop:HydrogenPressureRange .
+
+h2v-prop:hasHydrogenpressure a owl:ObjectProperty ;
+    rdfs:label "has hydrogen pressure"^^xsd:string ;
+    rdfs:domain h2v:HydrogenConsumer ;
+    rdfs:range h2v-prop:Hydrogenpressure .
+
+h2v-prop:hasImportedHydrogenFlowPressure a owl:ObjectProperty ;
+    rdfs:label "has imported hydrogen flow pressure"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:ImportedHydrogenFlowPressure .
+
+h2v-prop:hasImportedHydrogenPressureRange a owl:ObjectProperty ;
+    rdfs:label "has imported hydrogen pressure range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:ImportedHydrogenPressureRange .
+
+h2v-prop:hasInputMassFlow a owl:ObjectProperty ;
+    rdfs:label "has input mass flow"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:InputMassFlow .
+
+h2v-prop:hasInputMassFlowRange a owl:ObjectProperty ;
+    rdfs:label "has input mass flow range "^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:InputMassFlowRange .
+
+h2v-prop:hasInputPressure a owl:ObjectProperty ;
+    rdfs:label "has input pressure"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:InputPressure .
+
+h2v-prop:hasInputPressureRange a owl:ObjectProperty ;
+    rdfs:label "has input pressure range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:InputPressureRange .
+
+h2v-prop:hasInputTemperature a owl:ObjectProperty ;
+    rdfs:label "has input temperature"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:InputTemperature .
+
+h2v-prop:hasInputTemperatureRange a owl:ObjectProperty ;
+    rdfs:label "has input temperature range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:InputTemperatureRange .
+
+h2v-prop:hasMassFlowPipe a owl:ObjectProperty ;
+    rdfs:label "has mass flow pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:MassFlowPipe .
+
+h2v-prop:hasMassFlowPointDevice a owl:ObjectProperty ;
+    rdfs:label "has mass flow point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:MassFlowPointDevice .
+
+h2v-prop:hasMaximumAmountofStoredDistilledWater a owl:ObjectProperty ;
+    rdfs:label "has maximum amount of stored distilled water"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:MaximumAmountofStoredDistilledWater .
+
+h2v-prop:hasMaximumDepthofDischarge a owl:ObjectProperty ;
+    rdfs:label "has maximum depth of discharge"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:MaximumDepthofDischarge .
+
+h2v-prop:hasMaximumHydrogenVolumePercentage a owl:ObjectProperty ;
+    rdfs:label "has maximum hydrogen volume percentage"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:MaximumHydrogenVolumePercentage .
+
+h2v-prop:hasMaximumMassFlowPipe a owl:ObjectProperty ;
+    rdfs:label "has maximum mass flow pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:MaximumMassFlowPipe .
+
+h2v-prop:hasMaximumMassFlowPointDevice a owl:ObjectProperty ;
+    rdfs:label "has maximum mass flow point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:MaximumMassFlowPointDevice .
+
+h2v-prop:hasMaximumStorageSize a owl:ObjectProperty ;
+    rdfs:label "has maximum storage size"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:MaximumStorageSize .
+
+h2v-prop:hasMaximumWaterFlowRate a owl:ObjectProperty ;
+    rdfs:label "has maximum water flow rate"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:MaximumWaterFlowRate .
+
+h2v-prop:hasN2Range a owl:ObjectProperty ;
+    rdfs:label "has n2 range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:N2Range .
+
+h2v-prop:hasNominalChemicalCompositionToleratedPipe a owl:ObjectProperty ;
+    rdfs:label "has nominal chemical composition tolerated pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:NominalChemicalCompositionToleratedPipe .
+
+h2v-prop:hasNominalChemicalCompositionToleratedPointDevice a owl:ObjectProperty ;
+    rdfs:label "has nominal chemical composition tolerated point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:NominalChemicalCompositionToleratedPointDevice .
+
+h2v-prop:hasNominalGlobalEfficiency a owl:ObjectProperty ;
+    rdfs:label "has nominal global efficiency"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:NominalGlobalEfficiency .
+
+h2v-prop:hasNominalH2OToleratedPipe a owl:ObjectProperty ;
+    rdfs:label "has nominal h2o tolerated pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:NominalH2OToleratedPipe .
+
+h2v-prop:hasNominalH2OToleratedPointDevice a owl:ObjectProperty ;
+    rdfs:label "has nominal h2o tolerated point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:NominalH2OToleratedPointDevice .
+
+h2v-prop:hasNominalModuleTemperature a owl:ObjectProperty ;
+    rdfs:label "has nominal module temperature"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:NominalModuleTemperature .
+
+h2v-prop:hasNominalN2ToleratedPipe a owl:ObjectProperty ;
+    rdfs:label "has nominal n2 tolerated pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:NominalN2ToleratedPipe .
+
+h2v-prop:hasNominalN2ToleratedPointDevice a owl:ObjectProperty ;
+    rdfs:label "has nominal n2 tolerated point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:NominalN2ToleratedPointDevice .
+
+h2v-prop:hasNominalO2ToleratedPipe a owl:ObjectProperty ;
+    rdfs:label "has nominal o2 tolerated pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:NominalO2ToleratedPipe .
+
+h2v-prop:hasNominalO2ToleratedPointDevice a owl:ObjectProperty ;
+    rdfs:label "has nominal o2 tolerated point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:NominalO2ToleratedPointDevice .
+
+h2v-prop:hasNominalPower a owl:ObjectProperty ;
+    rdfs:label "has nominal power"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:NominalPower .
+
+h2v-prop:hasNominalStorageLeakage a owl:ObjectProperty ;
+    rdfs:label "has nominal storage leakage"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:NominalStorageLeakage .
+
+h2v-prop:hasO2Range a owl:ObjectProperty ;
+    rdfs:label "has o2 range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:O2Range .
+
+h2v-prop:hasOutputH2Pressure a owl:ObjectProperty ;
+    rdfs:label "has output h2 pressure"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:OutputH2Pressure .
+
+h2v-prop:hasOutputH2Temperature a owl:ObjectProperty ;
+    rdfs:label "has output h2 temperature"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:OutputH2Temperature .
+
+h2v-prop:hasOutputMassFlow a owl:ObjectProperty ;
+    rdfs:label "has output mass flow"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:OutputMassFlow .
+
+h2v-prop:hasPressureH2Pipe a owl:ObjectProperty ;
+    rdfs:label "has pressure h2 pipe"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:PressureH2Pipe .
+
+h2v-prop:hasPressureH2PointDevice a owl:ObjectProperty ;
+    rdfs:label "has pressure h2 point device"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:PressureH2PointDevice .
+
+h2v-prop:hasPressureRange a owl:ObjectProperty ;
+    rdfs:label "has pressure range"^^xsd:string ;
+    rdfs:domain h2v:Pipe ;
+    rdfs:range h2v-prop:PressureRange .
+
+h2v-prop:hasRatioH2 a owl:ObjectProperty ;
+    rdfs:label "has ratio h2"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:RatioH2 .
+
+h2v-prop:hasStateOfCharge a owl:ObjectProperty ;
+    rdfs:label "has state of charge"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:StateOfCharge .
+
+h2v-prop:hasStoragePressure a owl:ObjectProperty ;
+    rdfs:label "has storage pressure"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:StoragePressure .
+
+h2v-prop:hasStoragePressureRange a owl:ObjectProperty ;
+    rdfs:label "has storage pressure range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:StoragePressureRange .
+
+h2v-prop:hasStorageTemperature a owl:ObjectProperty ;
+    rdfs:label "has storage temperature"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:StorageTemperature .
+
+h2v-prop:hasStorageTemperatureRange a owl:ObjectProperty ;
+    rdfs:label "has storage temperature range"^^xsd:string ;
+    rdfs:domain h2v:HydrogenStorage ;
+    rdfs:range h2v-prop:StorageTemperatureRange .
+
+h2v-prop:hasSystemArea a owl:ObjectProperty ;
+    rdfs:label "has system area"^^xsd:string ;
+    rdfs:domain h2v:PVsystem ;
+    rdfs:range h2v-prop:SystemArea .
+
+h2v-prop:hasSystemSpecificEnergy a owl:ObjectProperty ;
+    rdfs:label "has system specific energy"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:SystemSpecificEnergy .
+
+h2v-prop:hasWaterConductivityRange a owl:ObjectProperty ;
+    rdfs:label "has water conductivity range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:WaterConductivityRange .
+
+h2v-prop:hasWaterFlow a owl:ObjectProperty ;
+    rdfs:label "has water flow"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:WaterFlow .
+
+h2v-prop:hasWaterPHRange a owl:ObjectProperty ;
+    rdfs:label "has water ph range"^^xsd:string ;
+    rdfs:domain h2v:Electrolyzer ;
+    rdfs:range h2v-prop:WaterPHRange .
+
+h2v-prop:hasWobbeIndex a owl:ObjectProperty ;
+    rdfs:label "has wobbe index"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:WobbeIndex .
+
+h2v-prop:hasWobbeIndexRange a owl:ObjectProperty ;
+    rdfs:label "has wobbe index range"^^xsd:string ;
+    rdfs:domain h2v:PointDevice ;
+    rdfs:range h2v-prop:WobbeIndexRange .
+
+h2v-prop:ActualGlobalEfficiency a owl:Class ;
+    rdfs:label "Actual Global Efficiency"^^xsd:string ;
+    rdfs:comment "The Actual Global Efficiency  [-] of the PV system of the HV is the overall system's energy conversion efficiency calculated based on actual measured inputs and outputs under real operating conditions"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Efficiency" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:ONE-PER-ONE" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualH2OPipe a owl:Class ;
+    rdfs:label "Actual H2O Pipe"^^xsd:string ;
+    rdfs:comment "The Actual H2O [ppm] is the actual amount of water vapor in the hydrogen gas across the pipe of the HV"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualH2OPointDevice a owl:Class ;
+    rdfs:label "Actual H2O Point Device"^^xsd:string ;
+    rdfs:comment "The Actual H2O [ppm] is the actual quantity of water vapor in the hydrogen mixture fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualModuleTemperature a owl:Class ;
+    rdfs:label "Actual Module Temperature"^^xsd:string ;
+    rdfs:comment "The Actual Module Temperature [°C] of the PV system of the HV is the actual PV module temperature, used for efficiency calculation, dependent on wind and enviromental temperature"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualN2Pipe a owl:Class ;
+    rdfs:label "Actual N2 Pipe"^^xsd:string ;
+    rdfs:comment "The Actual N2 [ppm] is the actual amount of nitrogen in the hydrogen gas across the pipe of the HV"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualN2PointDevice a owl:Class ;
+    rdfs:label "Actual N2 Point Device"^^xsd:string ;
+    rdfs:comment "The Actual N2 [ppm] is the actual quantity of nitrogen in the hydrogen mixture fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualO2Pipe a owl:Class ;
+    rdfs:label "Actual O2 Pipe"^^xsd:string ;
+    rdfs:comment "The Actual O2 [ppm] is the actual amount of oxigen in the hydrogen gas across the pipe of the HV"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualO2PointDevice a owl:Class ;
+    rdfs:label "Actual O2 Point Device"^^xsd:string ;
+    rdfs:comment "The Actual O2 [ppm] is the actual quantity of oxigen in the hydrogen mixture fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualPlaneOfArrayIrradiancePOA a owl:Class ;
+    rdfs:label "Actual Plane Of Array Irradiance POA"^^xsd:string ;
+    rdfs:comment "The Actual Plane Of Array Irradiance POA [kWh/m2] is the actual usable solar energy expected to reach the PV panels (per square meter of useful surface) over a certain time period. It is the GHI and its component (direct, diffusive and albedo) adjusted by each possible losses such as incindence angle, shading, soiling, etc"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW-HR-PER-M2" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:EnergyPerArea" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualPowerProduction a owl:Class ;
+    rdfs:label "Actual Power Production"^^xsd:string ;
+    rdfs:comment "The Actual Power Production [kW] of the PV system of the HV is the average power output, updated using actual performance data"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:ElectricPower" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ActualStorageSizeMax a owl:Class ;
+    rdfs:label "Actual Storage Size Max"^^xsd:string ;
+    rdfs:comment "The Actual Storage Size Max [kg] of the storage of the HV is the maximum quantity of hydrogen that can be stored based on thermodynamic conditions"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:AmountOfHydrogenStored a owl:Class ;
+    rdfs:label "Amount Of Hydrogen Stored"^^xsd:string ;
+    rdfs:comment "The Amount Of Hydrogen Stored [kg] is the quantity of hydrogen stored in the storage unit"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:AmountOfStoredDistilledWater a owl:Class ;
+    rdfs:label "Amount Of Stored Distilled Water"^^xsd:string ;
+    rdfs:comment "The Amount Of Stored Distilled Water [kg] of the electrolyzer is the measured distilled water contained in water storage of the electrolyzer"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ChemicalCompositionPipe a owl:Class ;
+    rdfs:label "Chemical Composition Pipe"^^xsd:string ;
+    rdfs:comment "The Chemical Composition [ppm] is the actual chemical composition of the hydrogen gas in the pipe (actual O2, actual H2O and actual N2), as measured at a certain time"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ChemicalCompositionPointDevice a owl:Class ;
+    rdfs:label "Chemical Composition Point Device"^^xsd:string ;
+    rdfs:comment "The Chemical Composition [ppm] is the actual chemical composition of hydrogen fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:CurrentHydrogenExported a owl:Class ;
+    rdfs:label "Current Hydrogen Exported"^^xsd:string ;
+    rdfs:comment "The Current Hydrogen Exported [kg] is the amount of hydrogen exported from the hydrogen storage facility"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:CurrentHydrogenImported a owl:Class ;
+    rdfs:label "Current Hydrogen Imported"^^xsd:string ;
+    rdfs:comment "The Current Hydrogen Imported [kg] is the amount of hydrogen imported into the hydrogen storage facility"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:DistilledWaterTemperature a owl:Class ;
+    rdfs:label "Distilled Water Temperature"^^xsd:string ;
+    rdfs:comment "The Distilled Water Temperature [°C] of the electrolyzer of the HV is the measured water temperature to be compared with the allowed range"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:DistilledWaterTemperatureRange a owl:Class ;
+    rdfs:label "Distilled Water Temperature Range"^^xsd:string ;
+    rdfs:comment "The Distilled Water Temperature Range [°C] of the electrolyzer of the HV is the range of temperature of the water stream allowed in the system"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:ElectricPower a owl:Class ;
+    rdfs:label "Electric Power"^^xsd:string ;
+    rdfs:comment "The Electric Power [kW] of the electrolyzer of the HV is the available electric power absorbed by the electrolyzer"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:ElectricPower" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ElectricPowerRange a owl:Class ;
+    rdfs:label "Electric Power Range"^^xsd:string ;
+    rdfs:comment "The Electric Power Range [kW] of the electrolyzer of the HV is the range of electric power allowed by the electrolyzer, Pmax = Maximum power that can be absorbed by the electrolyzer without compromising the integrity of its components. Pmin = Minimum power at which the electrolyzer can operate without compromising the electrolysis reaction"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:ElectricPower" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:EnvironmentalTemperatureRange a owl:Class ;
+    rdfs:label "Environmental Temperature Range"^^xsd:string ;
+    rdfs:comment "The Environmental Temperature Range [°C] of the PV system of the HV is the range of enviromental temperature which guarantees the good performance of the PV plant"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:EnvironmentalWindSpeedRange a owl:Class ;
+    rdfs:label "Environmental Wind Speed Range"^^xsd:string ;
+    rdfs:comment "The Environmental Wind Speed Range [m/s] of the PV system of the HV is the range of wind speeds which guarantees the good performance of the PV plant"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:M-PER-SEC" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Speed" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:ExportedHydrogenFlowPressure a owl:Class ;
+    rdfs:label "Exported Hydrogen Flow Pressure"^^xsd:string ;
+    rdfs:comment "The Exported Hydrogen Flow Pressure [bar] is the hydrogen flow pressure level during the export operations"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ExportedHydrogenPressureRange a owl:Class ;
+    rdfs:label "Exported Hydrogen Pressure Range"^^xsd:string ;
+    rdfs:comment "The Exported Hydrogen Pressure Range [bar] is the range (min – max) acceptable hydrogen pressure due to plants’ constraints for the export operations"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:ForecastedGlobalEfficiency a owl:Class ;
+    rdfs:label "Forecasted Global Efficiency"^^xsd:string ;
+    rdfs:comment "The Forecasted Global Efficiency [-] of the PV system of the HV is the overall system's energy conversion efficiency calculated based on forecasted inputs and outputs under real operating conditions"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Efficiency" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:ONE-PER-ONE" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ForecastedModuleTemperature a owl:Class ;
+    rdfs:label "Forecasted Module Temperature"^^xsd:string ;
+    rdfs:comment "The Forecasted Module Temperature [°C] of the PV system of the HV is the predicted PV module temperature, used for efficiency calculation, dependent on wind and enviromental temperature"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ForecastedPlaneOfArrayIrradiancePOA a owl:Class ;
+    rdfs:label "Forecasted Plane Of Array Irradiance POA"^^xsd:string ;
+    rdfs:comment "The Forecasted Plane Of Array Irradiance POA [kWh/m2] is the forecasted usable solar energy expected to reach the PV panels (per square meter of useful surface) over a certain time period. It is the GHI and its component (direct, diffusive and albedo) adjusted by each possible losses such as incindence angle, shading, soiling, etc"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW-HR-PER-M2" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:EnergyPerArea" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ForecastedPowerProduction a owl:Class ;
+    rdfs:label "Forecasted Power Production"^^xsd:string ;
+    rdfs:comment "The Forecasted Power Production [kW] of the PV system of the HV is the average power output, based on a forecast"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:ElectricPower" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:GasCompositionRange a owl:Class ;
+    rdfs:label "Gas Composition Range"^^xsd:string ;
+    rdfs:comment "The Gas Composition Range [ppm] of the electrolyzer of the HV is the range composition of gas contaminant  (O2 Range, H2O Range and N2 Range) allowed in the mainstream to be exported to consumers downstream of the treatment systems"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:H2ORange a owl:Class ;
+    rdfs:label "H2O Range"^^xsd:string ;
+    rdfs:comment "The H2O Range [ppm] of the electrolyzer of the HV is the range of water vapor allowed in the mainstream to be exported to consumers downstream of the treatment systems"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:H2PressureRangeElectrolyzer a owl:Class ;
+    rdfs:label "H2 Pressure Range Electrolyzer"^^xsd:string ;
+    rdfs:comment "The H2 Pressure Range [bar] of the electrolyzer of the HV is the range of pressure of the hydrogen stream allowed as output of the system"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:H2PressureRangePointDevice a owl:Class ;
+    rdfs:label "H2 Pressure Range Point Device"^^xsd:string ;
+    rdfs:comment "The H2 Pressure Range [bar] is the range of pressure of the H2 within which hydrogen can be delivered to the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:H2ProductionRange a owl:Class ;
+    rdfs:label "H2 Production Range"^^xsd:string ;
+    rdfs:comment "The H2 Production Range [kg/h] of the electrolyzer of the HV is the maximum and minimum flow rate possible at the output of the electrolyzer "^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:H2TemperatureRange a owl:Class ;
+    rdfs:label "H2 Temperature Range"^^xsd:string ;
+    rdfs:comment "The H2 Temperature Range [°C] of the electrolyzer of the HV is the range of temperature of the hydrogen stream allowed as output of the system"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:HHV a owl:Class ;
+    rdfs:label "HHV"^^xsd:string ;
+    rdfs:comment "The HHV [MJ/m^3] is the current calorific value of fuel on the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:EnergyDensity" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:MegaJ-PER-M3" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:HHVRangeH2 a owl:Class ;
+    rdfs:label "HHV Range H2"^^xsd:string ;
+    rdfs:comment "The HHV Range H2 [MJ/m^3] is the maximum and minimum upper calorific value of hydrogen accepted for gas (energy contained in the fuel per cubic metre under defined normal thermodynamic conditions)"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:EnergyDensity" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:MegaJ-PER-M3" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:HydrogenAllocated a owl:Class ;
+    rdfs:label "Hydrogen Allocated"^^xsd:string ;
+    rdfs:comment "The Hydrogen Allocated [Kg] is the amount of renewable hydrogen allocated to the Storage at a certain time"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:HydrogenFlowDemand a owl:Class ;
+    rdfs:label "Hydrogen Flow Demand"^^xsd:string ;
+    rdfs:comment "The Hydrogen Flow Demand [kg/h] is the hydrogen flow demand requested by the consumption facility in order to satisfy its need"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:HydrogenFlowDemandRange a owl:Class ;
+    rdfs:label "Hydrogen Flow Demand Range"^^xsd:string ;
+    rdfs:comment "The Hydrogen Flow Demand Range [kg/h] is the range (min – max) acceptable hydrogen flow due to plants’ constraints"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:HydrogenMassFlow a owl:Class ;
+    rdfs:label "Hydrogen Mass Flow"^^xsd:string ;
+    rdfs:comment "The Hydrogen Mass Flow [kg/h] of the electrolyzer of the HV is the  hydrogen flow at the output of the electrolyzer"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:HydrogenMassFlowInjectable a owl:Class ;
+    rdfs:label "Hydrogen Mass Flow Injectable"^^xsd:string ;
+    rdfs:comment "The Hydrogen Mass Flow Injectable [kg/h] is the hydrogen flow that can be received from the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:HydrogenPercentage a owl:Class ;
+    rdfs:label "Hydrogen Percentage "^^xsd:string ;
+    rdfs:comment "The Hydrogen Percentage [kgH2/kg gas] is the percentage of current hydrogen on the gas network "^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PERCENT" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:HydrogenPressureRange a owl:Class ;
+    rdfs:label "Hydrogen Pressure Range"^^xsd:string ;
+    rdfs:comment "The Hydrogen Pressure Range [bar] is the range (min – max) acceptable hydrogen pressure due to plants’ constraints"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:Hydrogenpressure a owl:Class ;
+    rdfs:label "Hydrogen pressure"^^xsd:string ;
+    rdfs:comment "The Hydrogen pressure [bar] is the hydrogen flow pressure level"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ImportedHydrogenFlowPressure a owl:Class ;
+    rdfs:label "Imported Hydrogen Flow Pressure"^^xsd:string ;
+    rdfs:comment "The Imported Hydrogen Flow Pressure [bar] is the hydrogen flow pressure level during the import operations"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:ImportedHydrogenPressureRange a owl:Class ;
+    rdfs:label "Imported Hydrogen Pressure Range"^^xsd:string ;
+    rdfs:comment "The Imported Hydrogen Pressure Range [bar] is the range (min – max) acceptable hydrogen pressure due to plants’ constraints for the import  operations"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:InputMassFlow a owl:Class ;
+    rdfs:label "Input Mass Flow"^^xsd:string ;
+    rdfs:comment "The Input Mass Flow [kg/h] is the hydrogen input flow to storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:InputMassFlowRange a owl:Class ;
+    rdfs:label "Input Mass Flow Range "^^xsd:string ;
+    rdfs:comment "The Input Mass Flow Range [kg/h] of the storage of the HV is the minimum and maximum hydrogen flow as input to storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:InputPressure a owl:Class ;
+    rdfs:label "Input Pressure"^^xsd:string ;
+    rdfs:comment "The Input Pressure [bar] of the storage of the HV is the hydrogen pressure as input to storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:InputPressureRange a owl:Class ;
+    rdfs:label "Input Pressure Range"^^xsd:string ;
+    rdfs:comment "The Input Pressure Range [bar] of the storage of the HV is the minimum and maximum hydrogen pressure allowed as input to storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:InputTemperature a owl:Class ;
+    rdfs:label "Input Temperature"^^xsd:string ;
+    rdfs:comment "The Input Temperature [°C] of the storage of the HV is the hydrogen input temperature at storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:InputTemperatureRange a owl:Class ;
+    rdfs:label "Input Temperature Range"^^xsd:string ;
+    rdfs:comment "The Input Temperature Range [°C] of the storage of the HV is the minimum and maximum hydrogen temperature allowed as input to storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MassFlowPipe a owl:Class ;
+    rdfs:label "Mass Flow Pipe"^^xsd:string ;
+    rdfs:comment "The Mass Flow [kgH2/h] is the actual hydrogen flow, as measured at a certain time"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:MassFlowPointDevice a owl:Class ;
+    rdfs:label "Mass Flow Point Device"^^xsd:string ;
+    rdfs:comment "The Mass Flow [kg/h] is the current hydrogen flow fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:MaximumAmountofStoredDistilledWater a owl:Class ;
+    rdfs:label "Maximum Amount of Stored Distilled Water"^^xsd:string ;
+    rdfs:comment "The Maximum Amount of Stored Distilled Water [kg] of the electrolyzer is the maximum quantity of distilled water that can be contained in water storage of the electrolyzer"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MaximumDepthofDischarge a owl:Class ;
+    rdfs:label "Maximum Depth of Discharge"^^xsd:string ;
+    rdfs:comment "The Maximum Depth of Discharge [%] of the storage of the HV is the maximum percentage of discharge allowed by the storage (hydrogen storage allows discharging up to a certain pressure limit value to keep the system safe)"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:PressureRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PERCENT" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MaximumHydrogenVolumePercentage a owl:Class ;
+    rdfs:label "Maximum Hydrogen Volume Percentage"^^xsd:string ;
+    rdfs:comment "The Maximum Hydrogen Volume Percentage [%] is the maximum hydrogen percentage in volume acceptable by the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PERCENT" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MaximumMassFlowPipe a owl:Class ;
+    rdfs:label "Maximum Mass Flow Pipe"^^xsd:string ;
+    rdfs:comment "The Maximum Mass Flow [kg/h] is the maximum transportable hydrogen flow"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MaximumMassFlowPointDevice a owl:Class ;
+    rdfs:label "Maximum Mass Flow Point Device"^^xsd:string ;
+    rdfs:comment "The Maximum Mass Flow [kg/h] is the maximum acceptable hydrogen flow from the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MaximumStorageSize a owl:Class ;
+    rdfs:label "Maximum Storage Size"^^xsd:string ;
+    rdfs:comment "The Maximum Storage Size [kg] of the storage of the HV is the maximum nominal quantity of hydrogen that can be contained in storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Mass" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:MaximumWaterFlowRate a owl:Class ;
+    rdfs:label "Maximum Water Flow Rate"^^xsd:string ;
+    rdfs:comment "The Maximum Water Flow Rate [kg/h] of the electrolyzer of the HV is the maximum flow rate of distilled water available"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:N2Range a owl:Class ;
+    rdfs:label "N2 Range"^^xsd:string ;
+    rdfs:comment "The N2 Range [ppm] of the electrolyzer of the HV is the range of nitrogen allowed in the mainstream to be exported to consumers downstream of the treatment systems"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalChemicalCompositionToleratedPipe a owl:Class ;
+    rdfs:label "Nominal Chemical Composition Tolerated Pipe"^^xsd:string ;
+    rdfs:comment "The Nominal Chemical Composition Tolerated [ppm] is the chemical composition of the gas acceptable in the pipe of the HV (Nominal O2, Nominal H2O, Nominal N2)"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalChemicalCompositionToleratedPointDevice a owl:Class ;
+    rdfs:label "Nominal Chemical Composition Tolerated Point Device"^^xsd:string ;
+    rdfs:comment "The Nominal Chemical Composition Tolerated [ppm] is the allowable hydrogen chemical composition in parts per million of hydrogen fouling (O2, H2O, N2)"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalGlobalEfficiency a owl:Class ;
+    rdfs:label "Nominal Global Efficiency"^^xsd:string ;
+    rdfs:comment "The Nominal Global Efficiency [-] of the PV system of the HV is the overall efficiency of an entire system, calculated under specified standard conditions, and expressed as a dimensionless ratio or percentage. It represents the system's rated performance in converting initial energy input into final useful output"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Efficiency" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:ONE-PER-ONE" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalH2OToleratedPipe a owl:Class ;
+    rdfs:label "Nominal H2O Tolerated Pipe"^^xsd:string ;
+    rdfs:comment "The Nominal H2O Tolerated [ppm] is the amount of water vapor acceptable in the hydrogen gas across the pipe of the HV"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalH2OToleratedPointDevice a owl:Class ;
+    rdfs:label "Nominal H2O Tolerated Point Device"^^xsd:string ;
+    rdfs:comment "The Nominal H2O Tolerated [ppm] is the maximum amount of water vapor tolerated in the hydrogen mixture to be fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalModuleTemperature a owl:Class ;
+    rdfs:label "Nominal Module Temperature"^^xsd:string ;
+    rdfs:comment "The Nominal Module Temperature [°C] of the PV system of the HV is the nominal of module temperature related to global nominal efficiency"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalN2ToleratedPipe a owl:Class ;
+    rdfs:label "Nominal N2 Tolerated Pipe"^^xsd:string ;
+    rdfs:comment "The Nominal N2 Tolerated [ppm] is the amount of nitrogen acceptable in the hydrogen gas across the pipe of the HV"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalN2ToleratedPointDevice a owl:Class ;
+    rdfs:label "Nominal N2 Tolerated Point Device"^^xsd:string ;
+    rdfs:comment "The Nominal N2 Tolerated [ppm] is the maximum amount of nitrogen tolerated in the hydrogen mixture to be fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalO2ToleratedPipe a owl:Class ;
+    rdfs:label "Nominal O2 Tolerated Pipe"^^xsd:string ;
+    rdfs:comment "The Nominal O2 Tolerated [ppm] is the amount of oxigen acceptable in the hydrogen gas across the pipe of the HV"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalO2ToleratedPointDevice a owl:Class ;
+    rdfs:label "Nominal O2 Tolerated Point Device"^^xsd:string ;
+    rdfs:comment "The Nominal O2 Tolerated [ppm] is the maximum amount of oxigen tolerated in the hydrogen mixture to be fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalPower a owl:Class ;
+    rdfs:label "Nominal Power"^^xsd:string ;
+    rdfs:comment "The Nominal Power [kW] of the PV system of the HV is the nominal power production"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloW" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:ElectricPower" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:NominalStorageLeakage a owl:Class ;
+    rdfs:label "Nominal Storage Leakage"^^xsd:string ;
+    rdfs:comment "The Nominal Storage Leakage [%kg loss/day] of the storage of the HV is the daily hydrogen leakage through leakage and valves"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Ratio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PERCENT" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:O2Range a owl:Class ;
+    rdfs:label "O2 Range"^^xsd:string ;
+    rdfs:comment "The O2 Range [ppm] of the electrolyzer of the HV is the range of oxygen allowed in the mainstream to be exported to consumers downstream of the treatment systems"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:PPM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:OutputH2Pressure a owl:Class ;
+    rdfs:label "Output H2 Pressure"^^xsd:string ;
+    rdfs:comment "The Output H2 Pressure [bar] of the electrolyzer of the HV is the measured H2 pressure to be compared with the allowed range"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:OutputH2Temperature a owl:Class ;
+    rdfs:label "Output H2 Temperature"^^xsd:string ;
+    rdfs:comment "The Output H2 Temperature [°C] of the electrolyzer of the HV is the measured H2 temperature to be compared with the allowed range"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:OutputMassFlow a owl:Class ;
+    rdfs:label "Output Mass Flow"^^xsd:string ;
+    rdfs:comment "The Output Mass Flow [kg/h] of the storage of the HV is the hydrogen flow output at storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:PressureH2Pipe a owl:Class ;
+    rdfs:label "Pressure H2 Pipe"^^xsd:string ;
+    rdfs:comment "The Pressure [bar] is the actual pressure of hydrogen, as measured at a certain time"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:PressureH2PointDevice a owl:Class ;
+    rdfs:label "Pressure H2 Point Device"^^xsd:string ;
+    rdfs:comment "The Pressure H2 [bar] is the current hydrogen pressure fed into the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:PressureRange a owl:Class ;
+    rdfs:label "Pressure Range"^^xsd:string ;
+    rdfs:comment "The Pressure Range [bar] is the maximum and minimum pressure of transportable hydrogen"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:RatioH2 a owl:Class ;
+    rdfs:label "Ratio H2"^^xsd:string ;
+    rdfs:comment "The Ratio H2 [kg H2/kg water] of the electrolyzer of the HV is the hydrogen production relative to the consumption of distilled water"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:ONE-PER-ONE" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:VolumeFlowRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:StateOfCharge a owl:Class ;
+    rdfs:label "State Of Charge"^^xsd:string ;
+    rdfs:comment "The State Of Charge  [%] of the Storage of the HV is the ratio between the amount of hydrogen stored at a certain time and the maximum amount of hydrogen allowed in storage"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PERCENT" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:DimensionlessRatio" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:StoragePressure a owl:Class ;
+    rdfs:label "Storage Pressure"^^xsd:string ;
+    rdfs:comment "The Storage Pressure [bar] of the storage of the HV is the hydrogen pressure inside the storage unit"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:StoragePressureRange a owl:Class ;
+    rdfs:label "Storage Pressure Range"^^xsd:string ;
+    rdfs:comment "The Storage Pressure Range [bar] of the storage of the HV is the minimum and maximum permissible hydrogen pressure inside the storage unit"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Pressure" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:BAR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:StorageTemperature a owl:Class ;
+    rdfs:label "Storage Temperature"^^xsd:string ;
+    rdfs:comment "The Storage Temperature [°C] of the storage of the HV is the hydrogen temperature inside the storage unit"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:StorageTemperatureRange a owl:Class ;
+    rdfs:label "Storage Temperature Range"^^xsd:string ;
+    rdfs:comment "The Storage Temperature Range [°C] of the storage of the HV is the minimum and maximum permissible hydrogen temperature inside the storage unit"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Temperature" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:DEG_C" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:SystemArea a owl:Class ;
+    rdfs:label "System Area"^^xsd:string ;
+    rdfs:comment "The System Area [m2] of the PV system of the HV is the useful surface for PV panels"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Area" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:M2" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:SystemSpecificEnergy a owl:Class ;
+    rdfs:label "System Specific Energy"^^xsd:string ;
+    rdfs:comment "The System Specific Energy [MJ/kg] of the electrolyzer of the HV is the electric energy consumed for each kg of H2 produced, which depends on the operating conditions and the state of the components"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:MegaJ-PER-KiloGM" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:SpecificEnergy" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:WaterConductivityRange a owl:Class ;
+    rdfs:label "Water Conductivity Range"^^xsd:string ;
+    rdfs:comment "The Water Conductivity Range [µS/cm] of the electrolyzer of the HV is the  measure of the dissolved salts in water and the acceptable range for an electrolyzer. Conductivity measures the ability of water to conduct electricity, which depends on the presence of dissolved ions. High conductivity indicates the presence of ionic impurities, which can affect the efficiency of the electrolyzer and cause corrosion or other operational issues"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:ElectrolyticConductivity" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:MicroS-PER-CentiM" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:WaterFlow a owl:Class ;
+    rdfs:label "Water Flow"^^xsd:string ;
+    rdfs:comment "The Water Flow [kg/h] of the electrolyzer of the HV is the actual distilled water consumption"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:MassFlowRate" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:KiloGM-PER-HR" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:WaterPHRange a owl:Class ;
+    rdfs:label "Water PH Range"^^xsd:string ;
+    rdfs:comment "The Water PH Range [-] of the electrolyzer of the HV is the measure of the acidity or basicity of distilled water. The pH can affect the solubility of various compounds and the formation of scale"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:PH" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:Acidity " ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+h2v-prop:WobbeIndex a owl:Class ;
+    rdfs:label "Wobbe Index"^^xsd:string ;
+    rdfs:comment "The Wobbe Index [MJ/m^3] is the current Wobbe index on the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "quantitykind:EnergyDensity" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:hasValue "unit:MegaJ-PER-M3" ;
+            owl:onProperty qudt:applicableUnit ],
+        h2v-prop:DynamicProperty .
+
+h2v-prop:WobbeIndexRange a owl:Class ;
+    rdfs:label "Wobbe Index Range"^^xsd:string ;
+    rdfs:comment "The Wobbe Index Range [MJ/m^3] is the ratio of HHV to the square root of the relative density of the fuel with respect to air. It gives information on the compatibility of a fuel with the gas network"^^xsd:string ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "unit:MegaJ-PER-M3" ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:hasValue "quantitykind:EnergyDensity" ;
+            owl:onProperty qudt:hasQuantityKind ],
+        h2v-prop:StaticProperty .
+
+
