@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/h2v/property#">
-        <owl:versionIRI rdf:resource="https://w3id.org/h2v/1.0.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/h2v/property/1.0.0"/>
         <dc:contributor>Claudio Sesto (RSE)</dc:contributor>
         <dc:contributor>Francesca Soldan (RSE)</dc:contributor>
         <dc:contributor>Ilaria Baroni (Cefriel)</dc:contributor>

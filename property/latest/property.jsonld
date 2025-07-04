@@ -1838,7 +1838,7 @@
     "@value" : "Hydrogen Valley Ontology (H2V) - Property module"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/h2v/1.0.0"
+    "@id" : "https://w3id.org/h2v/property/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"

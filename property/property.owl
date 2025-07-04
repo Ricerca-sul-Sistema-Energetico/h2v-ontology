@@ -20,7 +20,7 @@ h2v-prop: a owl:Ontology ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher "Cefriel" ;
     bibo:status "Published"@en ;
-    owl:versionIRI <https://w3id.org/h2v/1.0.0> ;
+    owl:versionIRI <https://w3id.org/h2v/property/1.0.0> ;
     owl:versionInfo "1.0.0" .
 
 h2v-prop:EnvironmentalTemperature a owl:Class ;

@@ -1,5 +1,5 @@
 <https://w3id.org/h2v/property#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/h2v/property#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/h2v/1.0.0> .
+<https://w3id.org/h2v/property#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/h2v/property/1.0.0> .
 <https://w3id.org/h2v/property#> <http://purl.org/dc/elements/1.1/contributor> "Claudio Sesto (RSE)" .
 <https://w3id.org/h2v/property#> <http://purl.org/dc/elements/1.1/contributor> "Francesca Soldan (RSE)" .
 <https://w3id.org/h2v/property#> <http://purl.org/dc/elements/1.1/contributor> "Ilaria Baroni (Cefriel)" .
