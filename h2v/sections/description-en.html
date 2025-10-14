@@ -8,32 +8,39 @@ The different areas constituting the hydrogen value chain are represented as sub
 
 In turn, a HydrogenValleyArea can have subsystems, namely [HydrogenValleyComponents](https://w3id.org/h2v#HydrogenValleyComponent). However, not all HydrogenValleyComponents can be traced back to a HydrogenValleyArea: in this case, the HydrogenValley will be directly connected to the HydrogenValleyComponent with the property hasSubSystem.
 
-All systems constituting a HydrogenValley, including the HydrogenValley itself, can be associated with a Geometry, which allows defining the spatial characteristics of the system based on the type of geometry (polygon, point, etc.), an identifier (property identifier), and a name (property title).
+All systems constituting a HydrogenValley, including the HydrogenValley itself, can be associated with a Geometry, which allows defining the spatial characteristics of the system based on the type of geometry (polygon, point, etc.), with an identifier (property identifier), a name (property title), and a description (property description).
 </span>
 
 <span class="markdown">
 The ontology also defines all components that can belong to a HydrogenValley, as subclasses of System:
 
 - [Electrolyzer](https://w3id.org/h2v#Electrolyzer) to represent the electrolyzer, that is a system that uses electrical energy to split water into hydrogen and oxygen;
-- [RESPlant](https://w3id.org/h2v#RESPlant) to represent a renewable energy plant that produces energy for the electrolyzer, and PhotovoltaicSystem, i.e., a photovoltaic plant, as a specific type of RESPlant;
+- [RESPlant](https://w3id.org/h2v#RESPlant) to represent a renewable energy plant that produces energy for the electrolyzer, and [PhotovoltaicSystem](https://w3id.org/h2v#PhotovoltaicSystem), i.e., a photovoltaic plant, as a specific type of RESPlant;
 - [HydrogenStorage](https://w3id.org/h2v#HydrogenStorage) to represent the hydrogen storage system;
 - [Pipe](https://w3id.org/h2v#Pipe) to represent the pipes for transporting hydrogen within the HV;
-- [PointDevice](https://w3id.org/h2v#PointDevice) to represent the HV transfer point with the gas network;
-- [HydrogenConsumer](https://w3id.org/h2v#HydrogenConsumer) to represent the system that utilizes the produced hydrogen for various purposes.
+- [PointDevice](https://w3id.org/h2v#PointDevice) to represent the device for the exchange of energy vectors in general, and [FuelCell](https://w3id.org/h2v#FuelCell), that converts the chemical energy of a fuel (e.g., hydrogen) into electricity, and [Blender](https://w3id.org/h2v#Blender), that is the transfer point with the gas network, as specific types of PointDevices;
+- [HydrogenConsumer](https://w3id.org/h2v#HydrogenConsumer) to represent the system that utilizes the produced hydrogen for various purposes;
+- [Valve](https://w3id.org/h2v#Valve) to represent a device for controlling the passage of fluid or air through a pipe, and specific types of valves, that is: ActuatedOn-OffValve, ManualValve, PressureControlValve, and GlobeValve;
+- [WaterTank](https://w3id.org/h2v#WaterTank) to represent a storage system for distilled water used as water source for the electrolyzer;
+- [WaterPump](https://w3id.org/h2v#WaterPump) to represent a system that allows water flow from water the tank to the electrolyzer.
 
 </span>
 
 <span class="markdown">
 Each system present in the HydrogenValley can be associated with one or more properties. Within the ontology, two types of properties are distinguished: static and dynamic. A StaticProperty is a nominal property of a system, typically defined by design or in the manufacturer's specifications, and is not intended to be dynamically observed or measured (e.g., the range of minimum and maximum electrical power allowed by a certain electrolyzer). A DynamicProperty (defined in the ontology as a subclass of ObservableProperty) is instead a property of a system that can vary over time and is dynamically observed or measured (e.g., the actual electrical power of an electrolyzer as measured at a certain time).
 
-A [StaticProperty](https://w3id.org/h2v#StaticProperty) is directly associated with a QuantityValue through the property hasStaticValue. A QuantityValue is a numerical value associated with a physical quantity, expressed in a specific unit of measure (property hasUnit, with codomain Unit). In the case of StaticProperty, a single value (numericValue) may be defined, or a range consisting of a minValue and a maxValue.
+A System is linked to a PropertyOfInterest, that is a property tied to a specific real-world System, which is in turn linked to its reference kind, that is a [StaticProperty](https://w3id.org/h2v#StaticProperty), which is instead independent from real-world systems. The PropertyOfInterest is directly associated with a QuantityValue through the property hasPropertyValue. A QuantityValue is a numerical value associated with a physical quantity, expressed in a specific unit of measure (property hasUnit, with codomain Unit). In the case of StaticProperty, a single value (numericValue) is defined. The [PropertySet](https://w3id.org/h2v#PropertySet) allows us to group properties for a specific purpose. These properties are usually members of a range (maximum/minimum), with a possible optimal value within the range.
 
 In the case of a [DynamicProperty](https://w3id.org/h2v#DynamicProperty), the numerical value is not predefined but is measured and thus inserted in the context of a specific Observation. The Observation is connected to the DynamicProperty being observed (observedProperty), the specific system to which the observed property is associated (hasFeatureOfInterest), and the QuantityValue resulting from the observation (hasResult). The QuantityValue will therefore include both the measured numerical value (numericValue) and the unit of measure used (hasUnit).
 
 The ontology models also 3 types of activities that can be relevant for an HydrogenValley: 
-- Forecast, and, more specifically, WeatherForecast, to represent an activity that produces a prediction about the future value of some WeatherProperty;
-- HydrogenAllocation to represent an activity in which an amount of hydrogen is allocated by a System, usually an Hydrogen Valley, to another System;
-- HydrogenImportExport to represent an activity in which an amount of hydrogen is exchanged between two systems, that is, an hydrogen importer and an hydrogen exporter.
+- [Forecast](https://w3id.org/h2v#Forecast), to represent an activity that produces a prediction about the future value of some Property (in this case, the DynamicProperty is inserted in the context of a specific Forecast), and, more specifically, [WeatherForecast](https://w3id.org/h2v#WeatherForecast), to represent an activity that produces a prediction about the future value of some WeatherProperty, that is a subclass of DynamicProperty;
+- [HydrogenAllocation](https://w3id.org/h2v#HydrogenAllocation) to represent an activity in which an amount of hydrogen is allocated by a System, usually an Hydrogen Valley, to another System;
+- [HydrogenImportExport](https://w3id.org/h2v#HydrogenImportExport) to represent an activity in which an amount of hydrogen is exchanged between two systems, that is, an hydrogen importer and an hydrogen exporter.
+
+It is also possible to model the [TechnicalDrawing](https://w3id.org/h2v#TechnicalDrawing) graphically representing an HydrogenValley, and to link the Geometry of all its components within the drawing with the property inTechnicalDrawing.
+
+Finally, in order to represent the topology of the HydrogenValley, the ontology introduces the class [Terminal](https://w3id.org/h2v#Terminal), which is linked to an HV Component and represents a connection point of that system to a piece of pipe. A terminal, or multiple terminals, of an HV Component can be included in a [ConnectivityNode](https://w3id.org/h2v#ConnectivityNode), meaning that all terminals in a certain connectivity node are physically connected together.
 
 </span>
 
