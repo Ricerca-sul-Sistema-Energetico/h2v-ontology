@@ -1,0 +1,464 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#DynamicProperty">https://w3id.org/h2v#DynamicProperty</a>
+<ul>
+<li>Added: rdfs:comment "A Dynamic Property is a time-varying Property of a System that is dynamically observed or measured."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Dynamic Property is a time-varying Property of a System that is dynamically observed or measured."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#ElectricityProductionArea">https://w3id.org/h2v#ElectricityProductionArea</a>
+<ul>
+<li>Added: rdfs:comment "An Electricity Production Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "An Electricity Production Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#Electrolyzer">https://w3id.org/h2v#Electrolyzer</a>
+<ul>
+<li>Added: rdfs:comment "An Electrolyzer is a system that uses electrical energy to split water into hydrogen and oxygen. An electrolyzer is part of the macrocomponent Hydrogen Production Area"^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "An Electrolyzer is a system that uses electrical energy to split water into hydrogen and oxygen."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#Forecast">https://w3id.org/h2v#Forecast</a>
+<ul>
+<li>Added: rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some property, based on models, data, or prior observations."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some property, based on models, data, or prior observations."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenAllocation">https://w3id.org/h2v#HydrogenAllocation</a>
+<ul>
+<li>Added: rdfs:comment "An Hydrogen Allocation is an activity in which an amount of hydrogen is allocated by a System, usually an Hydrogen Valley, to another System (e.g., an Hydrogen Consumer)."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "An Hydrogen Allocation is an activity in which an amount of hydrogen is allocated by a System, usually an Hydrogen Valley, to another System (e.g., an Hydrogen Consumer)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenConsumer">https://w3id.org/h2v#HydrogenConsumer</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Consumer is a system that uses hydrogen for various purposes, such as industry, transportation, or energy production. The Hydrogen Consumer is part of the macrocomponent Hydrogen Consumption Area."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Consumer is a system that uses hydrogen for various purposes, such as industry, transportation, or energy production. "^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenConsumptionArea">https://w3id.org/h2v#HydrogenConsumptionArea</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Consumption Area is the geographical polygon where the hydrogen consumer is located (given by a list of coordinates)."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Consumption Area is the geographical polygon where the hydrogen consumer is located (given by a list of coordinates)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenImportExport">https://w3id.org/h2v#HydrogenImportExport</a>
+<ul>
+<li>Added: rdfs:comment "An Hydrogen Import Export is an activity in which an amount of hydrogen is exchanged between two systems, that is, an hydrogen importer and an hydrogen exporter."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "An Hydrogen Import Export is an activity in which an amount of hydrogen is exchanged between two systems, that is, an hydrogen importer and an hydrogen exporter."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenProductionArea">https://w3id.org/h2v#HydrogenProductionArea</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Production Area is the geographical polygon where the electrolyzer is located (given by a list of coordinates)."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Production Area is the geographical polygon where the electrolyzer is located (given by a list of coordinates)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenStorage">https://w3id.org/h2v#HydrogenStorage</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Storage is the system for storing the produced hydrogen, which can be stored in compressed gaseous form, as a liquid, or through other methods. Hydrogen storage is essential to ensure system flexibility and to balance energy production and demand. The Hydrogen Storage is the interface for import/export operations. The Hydrogen Storage is part of the macrocomponent Hydrogen Storage Area."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Storage is the system for storing the produced hydrogen, which can be stored in compressed gaseous form, as a liquid, or through other methods. Hydrogen storage is essential to ensure system flexibility and to balance energy production and demand. TheHydrogen Storage is the interface for import/export operations."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenStorageArea">https://w3id.org/h2v#HydrogenStorageArea</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Storage Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Storage Area is the geographical polygon where the hydrogen storage is located (given by a list of coordinates)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenValley">https://w3id.org/h2v#HydrogenValley</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Valley (HV) is a geographic area—such as a city, region, island, or industrial cluster—where various hydrogen applications are combined into an integrated hydrogen ecosystem that consumes a significant amount of hydrogen. An Hydrogen Valley can therefore encompass the entire hydrogen value chain: production, storage, distribution, and end use."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Valley (HV) is a geographic area—such as a city, region, island, or industrial cluster—where various hydrogen applications are combined into an integrated hydrogen ecosystem that consumes a significant amount of hydrogen. An Hydrogen Valley can therefore encompass the entire hydrogen value chain: production, storage, distribution, and end use."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenValleyArea">https://w3id.org/h2v#HydrogenValleyArea</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Valley Area is a System within a Hydrogen Valley that corresponds to a zone where specific hydrogen-related activities, like hydrogen storage or consumption, take place. An HydrogenValleyArea has at least one SubSystem. "^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Valley Area is a System within a Hydrogen Valley that corresponds to a zone where specific hydrogen-related activities, like hydrogen storage or consumption, take place. An HydrogenValleyArea has at least one SubSystem. "^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#HydrogenValleyComponent">https://w3id.org/h2v#HydrogenValleyComponent</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Valley Component is a System within a Hydrogen Valley that contributes to the hydrogen value chain, such as hydrogen production. "^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Valley Component is a System within a Hydrogen Valley that contributes to the hydrogen value chain, such as hydrogen production. "^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#PhotovoltaicSystem">https://w3id.org/h2v#PhotovoltaicSystem</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://cim.fein-aachen.org/libcimpp/doc/IEC61970_17v23/classIEC61970_1_1Base_1_1Generation_1_1Production_1_1PhotoVoltaicUnit.html"^^rdfs:Literal</li>
+<li>Added: rdfs:comment "A Photovoltaic System is a complete electrical system that generates electricity from sunlight using solar panels. It comprises various components, including solar panels, inverters, and potentially batteries."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Photovoltaic System is a complete electrical system that generates electricity from sunlight using solar panels. It comprises various components, including solar panels, inverters, and potentially batteries."^^xsd:string</li>
+<li>Deleted: rdfs:seeAlso "https://cim.fein-aachen.org/libcimpp/doc/IEC61970_17v23/classIEC61970_1_1Base_1_1Generation_1_1Production_1_1PhotoVoltaicUnit.html"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#Pipe">https://w3id.org/h2v#Pipe</a>
+<ul>
+<li>Added: rdfs:comment "A Hydrogen Pipe is the system used to transport hydrogen gas across the different systems of a HV. The pipe connects a component X to a component Y."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Hydrogen Pipe is the system used to transport hydrogen gas across the different systems of a HV."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#PointDevice">https://w3id.org/h2v#PointDevice</a>
+<ul>
+<li>Added: rdfs:comment "The Point Device is the device for the exchange of energy vectors in general (hydrogen with heat/gas/electricity)"^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Point Device is the transfer point of the HV with the gas network."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#RESPlant">https://w3id.org/h2v#RESPlant</a>
+<ul>
+<li>Added: rdfs:comment "A RES Plant is renewable energy system that powers the electrolyzer. This can be a photovoltaic, wind, hydroelectric, or geothermal plant. Its capacity and production profile directly affect the amount of green hydrogen that can be generated. An RES plant is part of the macrocomponent Electricity Production Area."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A RES Plant is renewable energy system that powers the electrolyzer. This can be a photovoltaic, wind, hydroelectric, or geothermal plant. Its capacity and production profile directly affect the amount of green hydrogen that can be generated."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#StaticProperty">https://w3id.org/h2v#StaticProperty</a>
+<ul>
+<li>Added: rdfs:comment "A Static Property is a nominal Property of a System, typically defined by design or manufacturer specifications, that is not meant to be dynamically observed."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Static Property is a nominal Property of a System, typically defined by design or manufacturer specifications, that is not meant to be dynamically observed"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#WeatherForecast">https://w3id.org/h2v#WeatherForecast</a>
+<ul>
+<li>Added: rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some weather property, based on models, data, or prior observations."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Forecast is an activity that produces a prediction about the future value of some weather property, based on models, data, or prior observations."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#WeatherProperty">https://w3id.org/h2v#WeatherProperty</a>
+<ul>
+<li>Added: rdfs:comment "A Weather Property is a specific type of Dynamic Property related to the weather."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A Weather Property is a specific type of Dynamic Property related to the weather."^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/sosa/Sensor">http://www.w3.org/ns/sosa/Sensor</a>
+</li>
+<li><a href="#https://saref.etsi.org/core/PropertyOfInterest">https://saref.etsi.org/core/PropertyOfInterest</a>
+</li>
+<li><a href="#ActuatedOn-OffValve">https://w3id.org/h2v#ActuatedOn-OffValve</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/h2v#Valve</li>
+</ul>
+</li>
+<li><a href="#Blender">https://w3id.org/h2v#Blender</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/h2v#PointDevice</li>
+</ul>
+</li>
+<li><a href="#ConnectivityNode">https://w3id.org/h2v#ConnectivityNode</a>
+</li>
+<li><a href="#FlowMeasuringSensor">https://w3id.org/h2v#FlowMeasuringSensor</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/sosa/Sensor</li>
+</ul>
+</li>
+<li><a href="#FuelCell">https://w3id.org/h2v#FuelCell</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/h2v#PointDevice</li>
+</ul>
+</li>
+<li><a href="#GlobeValve">https://w3id.org/h2v#GlobeValve</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/h2v#Valve</li>
+</ul>
+</li>
+<li><a href="#LevelMeasuringSensor">https://w3id.org/h2v#LevelMeasuringSensor</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/sosa/Sensor</li>
+</ul>
+</li>
+<li><a href="#ManualValve">https://w3id.org/h2v#ManualValve</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/h2v#Valve</li>
+</ul>
+</li>
+<li><a href="#PressureControlValve">https://w3id.org/h2v#PressureControlValve</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/h2v#Valve</li>
+</ul>
+</li>
+<li><a href="#PressureMeasuringSensor">https://w3id.org/h2v#PressureMeasuringSensor</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/sosa/Sensor</li>
+</ul>
+</li>
+<li><a href="#PropertySet">https://w3id.org/h2v#PropertySet</a>
+</li>
+<li><a href="#TechnicalDrawing">https://w3id.org/h2v#TechnicalDrawing</a>
+</li>
+<li><a href="#TemperatureMeasuringSensor">https://w3id.org/h2v#TemperatureMeasuringSensor</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/sosa/Sensor</li>
+</ul>
+</li>
+<li><a href="#Terminal">https://w3id.org/h2v#Terminal</a>
+</li>
+<li><a href="#Valve">https://w3id.org/h2v#Valve</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/ssn/System</li>
+</ul>
+</li>
+<li><a href="#WaterPump">https://w3id.org/h2v#WaterPump</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/ssn/System</li>
+</ul>
+</li>
+<li><a href="#WaterTank">https://w3id.org/h2v#WaterTank</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/ssn/System</li>
+</ul>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#allocatedBy">https://w3id.org/h2v#allocatedBy</a>
+<ul>
+<li>Added: rdfs:comment "This property links an Hydrogen Allocation activity to the System that is allocating hydrogen to another system."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links an Hydrogen Allocation to the System that is allocating hydrogen to another system."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#allocatedTo">https://w3id.org/h2v#allocatedTo</a>
+<ul>
+<li>Added: rdfs:comment "This property links an Hydrogen Allocation activity to the System that is receiving hydrogen from another system. "^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links an Hydrogen Allocation to the System that is receiving hydrogen from another system. "^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasAllocatedValue">https://w3id.org/h2v#hasAllocatedValue</a>
+<ul>
+<li>Added: rdfs:comment "This property links an Hydrogen Allocation activity to the amount of hydrogen that is being allocated."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "nan"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasExporter">https://w3id.org/h2v#hasExporter</a>
+<ul>
+<li>Added: rdfs:comment "This property links an Hydrogen Import Export activity to the System that is exporting to another system."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links an Hydrogen Import Export activity to the System that is exporting to another system."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasForecastedValue">https://w3id.org/h2v#hasForecastedValue</a>
+<ul>
+<li>Added: rdfs:comment "This property links a Forecast to the Quantity Value of the Dynamic Property that the forecast is about."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links a Forecast to the Quantity Value of the Dynamic Property that the forecast is about."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasImportedExportedValue">https://w3id.org/h2v#hasImportedExportedValue</a>
+<ul>
+<li>Added: rdfs:comment "This property links an Hydrogen Import Export activity to the amount of hydrogen that is being imported/exported."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links an Hydrogen Import Export activity to the amount of hydrogen that is being imported/exported."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasImporter">https://w3id.org/h2v#hasImporter</a>
+<ul>
+<li>Added: rdfs:comment "This property links an Hydrogen Import Export activity to the System that is importing from another system."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links an Hydrogen Import Export activity to the System that is importing from another system."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#refersToFeature">https://w3id.org/h2v#refersToFeature</a>
+<ul>
+<li>Added: rdfs:comment "This property links a Weather Forecast to the geographical Feature to which the forecast applies."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links a Weather Forecast to the geographical Feature to which the forecast applies."^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/sosa/madeBySensor">http://www.w3.org/ns/sosa/madeBySensor</a>
+</li>
+<li><a href="#https://saref.etsi.org/core/hasPropertyKind">https://saref.etsi.org/core/hasPropertyKind</a>
+</li>
+<li><a href="#https://saref.etsi.org/core/hasPropertyOfInterest">https://saref.etsi.org/core/hasPropertyOfInterest</a>
+</li>
+<li><a href="#appliesToSystem">https://w3id.org/h2v#appliesToSystem</a>
+<ul>
+<li>Added: Range http://www.w3.org/ns/ssn/System</li>
+<li>Added: domain http://www.w3.org/ns/ssn/Property</li>
+</ul>
+</li>
+<li><a href="#forecastedProperty">https://w3id.org/h2v#forecastedProperty</a>
+<ul>
+<li>Added: Range https://w3id.org/h2v#DynamicProperty</li>
+<li>Added: domain https://w3id.org/h2v#Forecast</li>
+</ul>
+</li>
+<li><a href="#hasMaximumPropertyMember">https://w3id.org/h2v#hasMaximumPropertyMember</a>
+<ul>
+<li>Added: domain https://w3id.org/h2v#PropertySet</li>
+<li>Added: Range https://w3id.org/h2v#StaticProperty</li>
+<li>Added: SubProperty of https://w3id.org/h2v#hasPropertyMember</li>
+</ul>
+</li>
+<li><a href="#hasMinimumPropertyMember">https://w3id.org/h2v#hasMinimumPropertyMember</a>
+<ul>
+<li>Added: Range https://w3id.org/h2v#StaticProperty</li>
+<li>Added: domain https://w3id.org/h2v#PropertySet</li>
+<li>Added: SubProperty of https://w3id.org/h2v#hasPropertyMember</li>
+</ul>
+</li>
+<li><a href="#hasOptimalPropertyMember">https://w3id.org/h2v#hasOptimalPropertyMember</a>
+<ul>
+<li>Added: Range https://w3id.org/h2v#StaticProperty</li>
+<li>Added: domain https://w3id.org/h2v#PropertySet</li>
+<li>Added: SubProperty of https://w3id.org/h2v#hasPropertyMember</li>
+</ul>
+</li>
+<li><a href="#hasPropertyMember">https://w3id.org/h2v#hasPropertyMember</a>
+<ul>
+<li>Added: domain https://w3id.org/h2v#PropertySet</li>
+<li>Added: Range https://w3id.org/h2v#StaticProperty</li>
+</ul>
+</li>
+<li><a href="#hasPropertyValue">https://w3id.org/h2v#hasPropertyValue</a>
+<ul>
+<li>Added: domain https://saref.etsi.org/core/PropertyOfInterest</li>
+<li>Added: Range http://qudt.org/schema/qudt/QuantityValue</li>
+</ul>
+</li>
+<li><a href="#hasTechnicalDrawing">https://w3id.org/h2v#hasTechnicalDrawing</a>
+<ul>
+<li>Added: domain http://www.w3.org/ns/ssn/System</li>
+<li>Added: Range https://w3id.org/h2v#TechnicalDrawing</li>
+</ul>
+</li>
+<li><a href="#hasTerminal">https://w3id.org/h2v#hasTerminal</a>
+<ul>
+<li>Added: domain http://www.w3.org/ns/ssn/System</li>
+<li>Added: Range https://w3id.org/h2v#Terminal</li>
+</ul>
+</li>
+<li><a href="#inTechnicalDrawing">https://w3id.org/h2v#inTechnicalDrawing</a>
+<ul>
+<li>Added: domain http://www.opengis.net/ont/geosparql#Geometry</li>
+<li>Added: Range https://w3id.org/h2v#TechnicalDrawing</li>
+</ul>
+</li>
+<li><a href="#includesTerminal">https://w3id.org/h2v#includesTerminal</a>
+<ul>
+<li>Added: domain https://w3id.org/h2v#ConnectivityNode</li>
+<li>Added: Range https://w3id.org/h2v#Terminal</li>
+</ul>
+</li>
+<li><a href="#isIncludedInConnectivityNode">https://w3id.org/h2v#isIncludedInConnectivityNode</a>
+<ul>
+<li>Added: domain https://w3id.org/h2v#Terminal</li>
+<li>Added: Range https://w3id.org/h2v#ConnectivityNode</li>
+</ul>
+</li>
+<li><a href="#isTechnicalDrawingOf">https://w3id.org/h2v#isTechnicalDrawingOf</a>
+<ul>
+<li>Added: domain https://w3id.org/h2v#TechnicalDrawing</li>
+<li>Added: Range http://www.w3.org/ns/ssn/System</li>
+</ul>
+</li>
+<li><a href="#isTerminalOf">https://w3id.org/h2v#isTerminalOf</a>
+<ul>
+<li>Added: domain https://w3id.org/h2v#Terminal</li>
+<li>Added: Range http://www.w3.org/ns/ssn/System</li>
+</ul>
+</li>
+<li><a href="#refersToFeatureOfInterest">https://w3id.org/h2v#refersToFeatureOfInterest</a>
+<ul>
+<li>Added: Range http://www.w3.org/ns/ssn/System</li>
+<li>Added: domain https://w3id.org/h2v#Forecast</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/ssn/hasProperty">http://www.w3.org/ns/ssn/hasProperty</a>
+</li>
+<li><a href="#forecastsProperty">https://w3id.org/h2v#forecastsProperty</a>
+</li>
+<li><a href="#hasDynamicProperty">https://w3id.org/h2v#hasDynamicProperty</a>
+</li>
+<li><a href="#hasStaticProperty">https://w3id.org/h2v#hasStaticProperty</a>
+</li>
+<li><a href="#hasStaticValue">https://w3id.org/h2v#hasStaticValue</a>
+</li>
+<li><a href="#isDynamicPropertyOf">https://w3id.org/h2v#isDynamicPropertyOf</a>
+</li>
+<li><a href="#isStaticPropertyOf">https://w3id.org/h2v#isStaticPropertyOf</a>
+</li>
+<li><a href="#isStaticValueOf">https://w3id.org/h2v#isStaticValueOf</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Modified data properties</u></summary>
+<ul><li><a href="#forecastedForTime">https://w3id.org/h2v#forecastedForTime</a>
+<ul>
+<li>Added: rdfs:comment "This property links a Forecast to the time in the future that the Forecast refers to."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property links a Forecast to the time in the future that the Forecast refers to."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#issuedAtTime">https://w3id.org/h2v#issuedAtTime</a>
+<ul>
+<li>Added: rdfs:comment "This property link a Forecast to the time when a Forecast has been issued."^^rdfs:Literal</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property link a Forecast to the time when a Forecast has been issued."^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/description">http://purl.org/dc/terms/description</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#accessURL">http://www.w3.org/ns/dcat#accessURL</a>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#http://schema.org/maxValue">http://schema.org/maxValue</a>
+</li>
+<li><a href="#http://schema.org/minValue">http://schema.org/minValue</a>
+</li>
+</ul></details></div>
