@@ -55,6 +55,8 @@
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Claudio Sesto (RSE)"
   }, {
+    "@value" : "Francesca Soldan (RSE)"
+  }, {
     "@value" : "Irene Celino (Cefriel)"
   } ],
   "http://purl.org/dc/terms/creator" : [ {

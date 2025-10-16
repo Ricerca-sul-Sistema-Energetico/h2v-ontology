@@ -8,10 +8,12 @@
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
 	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:wasRevisionOf <https://w3id.org/h2v/property/1.0.0>;
 .
 :agent0 a prov:Agent; foaf:name "Gloria Re Calegari (Cefriel)".
 :agent1 a prov:Agent; foaf:name "Valentina Carriero (Cefriel)".
 :agent2 a prov:Agent; foaf:name "Claudio Sesto (RSE)".
-:agent3 a prov:Agent; foaf:name "Irene Celino (Cefriel)".
+:agent3 a prov:Agent; foaf:name "Francesca Soldan (RSE)".
+:agent4 a prov:Agent; foaf:name "Irene Celino (Cefriel)".

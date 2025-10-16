@@ -61,8 +61,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdfs:label>Hydrogen Valley Ontology (H2V) - Property module</rdfs:label>
     <dct:contributor>Claudio Sesto (RSE)</dct:contributor>
-    <dct:contributor>Francesca Soldan (RSE)</dct:contributor>
     <dct:contributor>Irene Celino (Cefriel)</dct:contributor>
+    <dct:contributor>Francesca Soldan (RSE)</dct:contributor>
     <dct:creator>Gloria Re Calegari (Cefriel)</dct:creator>
     <dct:creator>Valentina Carriero (Cefriel)</dct:creator>
     <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
